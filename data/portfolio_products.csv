@@ -1,0 +1,5 @@
+product_id,modality,stage,patent_months,primary_market,risk
+NCX-101,small_molecule,marketed,19,US/EU,label divergence
+NCB-204,monoclonal_antibody,phase_III_scaleup,108,Global,batch/trial convergence
+NCS-310,sterile_injectable,marketed_shortage,44,Global,cold-chain/sterility
+NCR-415,gene_therapy,research,144,EU/US,genomic privacy

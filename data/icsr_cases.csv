@@ -1,0 +1,4 @@
+case_id,source,product,event,country,awareness_date,language,patient_key
+PV-1001,patient_program,NCB-204,anaphylaxis,DE,2026-07-20,German,P-7X
+PV-1009,literature,brand_alias_B,severe allergic reaction,DE,2026-07-22,English,unknown
+PV-1014,call_centre,NCB204,breathing difficulty,DE,2026-07-19,Arabic,P-7X

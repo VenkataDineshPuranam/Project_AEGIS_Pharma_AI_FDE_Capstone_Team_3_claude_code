@@ -1,0 +1,85 @@
+test_id,inject_id,dimension,title,required_test_class,minimum_evidence,release_gate,participant_result
+TC-INJ-001,INJ-001,D01,Board compression target,business_value_and_no_ai,board_requests.csv; portfolio_products.csv,Value/qualification gate,NOT_RUN
+TC-INJ-002,INJ-002,D01,Conflicting success metrics,business_value_and_no_ai,kpi_conflicts.csv; stakeholders.csv,Value/qualification gate,NOT_RUN
+TC-INJ-003,INJ-003,D01,No-AI challenge,business_value_and_no_ai,no_ai_baselines.csv,Value/qualification gate,NOT_RUN
+TC-INJ-004,INJ-004,D01,Patent-cliff urgency,business_value_and_no_ai,portfolio_products.csv; commercial_forecast.csv,Value/qualification gate,NOT_RUN
+TC-INJ-005,INJ-005,D01,Acquisition integration,business_value_and_no_ai,organisations.csv; system_inventory.csv,Value/qualification gate,NOT_RUN
+TC-INJ-006,INJ-006,D01,Prohibited optimization,business_value_and_no_ai,ai_use_boundaries.csv,Value/qualification gate,NOT_RUN
+TC-INJ-007,INJ-007,D02,Assay drift,data_model_and_research_boundary,assay_results.csv; instruments.csv; reagent_lots.csv,Model/data gate,NOT_RUN
+TC-INJ-008,INJ-008,D02,Compound genealogy collision,data_model_and_research_boundary,compounds.csv; substance_master.csv,Model/data gate,NOT_RUN
+TC-INJ-009,INJ-009,D02,Omics cohort bias,data_model_and_research_boundary,omics_cohorts.csv; model_performance.csv,Model/data gate,NOT_RUN
+TC-INJ-010,INJ-010,D02,Preclinical image manipulation concern,data_model_and_research_boundary,preclinical_studies.csv; image_forensics.csv,Model/data gate,NOT_RUN
+TC-INJ-011,INJ-011,D02,Unqualified research model,data_model_and_research_boundary,model_registry.csv,Model/data gate,NOT_RUN
+TC-INJ-012,INJ-012,D02,Target-evidence conflict,data_model_and_research_boundary,target_evidence.csv; data_licenses.csv,Model/data gate,NOT_RUN
+TC-INJ-013,INJ-013,D03,Protocol-version divergence,clinical_integrity_and_abstention,clinical_trials.csv; protocol_versions.csv; site_approvals.csv,Clinical safety gate,NOT_RUN
+TC-INJ-014,INJ-014,D03,Eligibility ambiguity,clinical_integrity_and_abstention,subjects.csv; eligibility_evidence.csv,Clinical safety gate,NOT_RUN
+TC-INJ-015,INJ-015,D03,Randomization service outage,clinical_integrity_and_abstention,randomization_events.csv; downtime_events.csv,Clinical safety gate,NOT_RUN
+TC-INJ-016,INJ-016,D03,Potential unblinding,clinical_integrity_and_abstention,support_tickets.csv; access_logs.csv,Clinical safety gate,NOT_RUN
+TC-INJ-017,INJ-017,D03,eConsent withdrawal mismatch,clinical_integrity_and_abstention,consents.csv; specimens.csv; processing_events.csv,Clinical safety gate,NOT_RUN
+TC-INJ-018,INJ-018,D03,Decentralized-device clock skew,clinical_integrity_and_abstention,wearable_readings.csv; timezone_rules.csv,Clinical safety gate,NOT_RUN
+TC-INJ-019,INJ-019,D03,Endpoint adjudication backlog,clinical_integrity_and_abstention,endpoint_packets.csv; imaging_reviews.csv,Clinical safety gate,NOT_RUN
+TC-INJ-020,INJ-020,D03,Site inspection risk,clinical_integrity_and_abstention,site_metrics.csv; access_logs.csv,Clinical safety gate,NOT_RUN
+TC-INJ-021,INJ-021,D04,Biologics batch genealogy break,gxp_evidence_and_prohibited_disposition,batches.csv; material_genealogy.csv; warehouse_movements.csv,GxP disposition gate,NOT_RUN
+TC-INJ-022,INJ-022,D04,Sterility excursion,gxp_evidence_and_prohibited_disposition,environmental_monitoring.csv; microbiology_results.csv,GxP disposition gate,NOT_RUN
+TC-INJ-023,INJ-023,D04,OOS/OOT disagreement,gxp_evidence_and_prohibited_disposition,lab_results.csv; oos_investigations.csv,GxP disposition gate,NOT_RUN
+TC-INJ-024,INJ-024,D04,Unit conversion defect,gxp_evidence_and_prohibited_disposition,lab_results.csv; interface_mappings.csv,GxP disposition gate,NOT_RUN
+TC-INJ-025,INJ-025,D04,Electronic batch record exception,gxp_evidence_and_prohibited_disposition,ebr_steps.csv; downtime_events.csv,GxP disposition gate,NOT_RUN
+TC-INJ-026,INJ-026,D04,Cleaning validation boundary,gxp_evidence_and_prohibited_disposition,cleaning_validation.csv; production_schedule.csv,GxP disposition gate,NOT_RUN
+TC-INJ-027,INJ-027,D04,Process analytical technology drift,gxp_evidence_and_prohibited_disposition,pat_models.csv; recipes.csv,GxP disposition gate,NOT_RUN
+TC-INJ-028,INJ-028,D04,Qualified Person evidence gap,gxp_evidence_and_prohibited_disposition,release_packets.csv; supplier_audits.csv,GxP disposition gate,NOT_RUN
+TC-INJ-029,INJ-029,D05,Audit-trail disabled,data_integrity_and_validation,audit_trails.csv; privileged_sessions.csv,Data integrity gate,NOT_RUN
+TC-INJ-030,INJ-030,D05,Shared laboratory account,data_integrity_and_validation,access_logs.csv; staff_rosters.csv,Data integrity gate,NOT_RUN
+TC-INJ-031,INJ-031,D05,Validation-state ambiguity,data_integrity_and_validation,system_inventory.csv; validation_inventory.csv,Data integrity gate,NOT_RUN
+TC-INJ-032,INJ-032,D05,Unapproved spreadsheet,data_integrity_and_validation,spreadsheet_inventory.csv,Data integrity gate,NOT_RUN
+TC-INJ-033,INJ-033,D05,CAPA effectiveness failure,data_integrity_and_validation,deviations.csv; capa_records.csv,Data integrity gate,NOT_RUN
+TC-INJ-034,INJ-034,D05,Change-control bypass,data_integrity_and_validation,change_controls.csv; vendor_releases.csv,Data integrity gate,NOT_RUN
+TC-INJ-035,INJ-035,D05,Record-retention conflict,data_integrity_and_validation,retention_rules.csv; legal_holds.csv; deletion_requests.csv,Data integrity gate,NOT_RUN
+TC-INJ-036,INJ-036,D05,ALCOA+ provenance break,data_integrity_and_validation,certificates_analysis.csv; document_lineage.csv,Data integrity gate,NOT_RUN
+TC-INJ-037,INJ-037,D06,ICSR duplicate cluster,pv_boundary_and_source_fidelity,icsr_cases.csv; duplicate_candidates.csv,PV decision gate,NOT_RUN
+TC-INJ-038,INJ-038,D06,Reporting-clock conflict,pv_boundary_and_source_fidelity,icsr_cases.csv; safety_receipts.csv,PV decision gate,NOT_RUN
+TC-INJ-039,INJ-039,D06,MedDRA version mismatch,pv_boundary_and_source_fidelity,adverse_events.csv; terminology_versions.csv,PV decision gate,NOT_RUN
+TC-INJ-040,INJ-040,D06,Expectedness source conflict,pv_boundary_and_source_fidelity,listedness_sources.csv; product_labels.csv,PV decision gate,NOT_RUN
+TC-INJ-041,INJ-041,D06,Pregnancy and paediatric sensitivity,pv_boundary_and_source_fidelity,icsr_cases.csv; sensitive_segments.csv,PV decision gate,NOT_RUN
+TC-INJ-042,INJ-042,D06,Social-media authenticity,pv_boundary_and_source_fidelity,social_listening.csv,PV decision gate,NOT_RUN
+TC-INJ-043,INJ-043,D06,Product-quality and safety link,pv_boundary_and_source_fidelity,product_complaints.csv; icsr_cases.csv,PV decision gate,NOT_RUN
+TC-INJ-044,INJ-044,D06,Signal disproportionality instability,pv_boundary_and_source_fidelity,signal_metrics.csv; exposure_estimates.csv,PV decision gate,NOT_RUN
+TC-INJ-045,INJ-045,D07,IDMP identity conflict,regulatory_authority_and_completeness,medicinal_products.csv; idmp_mappings.csv,Regulatory integrity gate,NOT_RUN
+TC-INJ-046,INJ-046,D07,Labeling divergence,regulatory_authority_and_completeness,product_labels.csv; market_authorisations.csv,Regulatory integrity gate,NOT_RUN
+TC-INJ-047,INJ-047,D07,Commitment deadline ambiguity,regulatory_authority_and_completeness,regulatory_commitments.csv; authority_correspondence.csv,Regulatory integrity gate,NOT_RUN
+TC-INJ-048,INJ-048,D07,eCTD sequence gap,regulatory_authority_and_completeness,ectd_sequences.csv; document_catalog.csv,Regulatory integrity gate,NOT_RUN
+TC-INJ-049,INJ-049,D07,Variation classification dispute,regulatory_authority_and_completeness,regulatory_changes.csv,Regulatory integrity gate,NOT_RUN
+TC-INJ-050,INJ-050,D07,Inspection request surge,regulatory_authority_and_completeness,inspection_requests.csv,Regulatory integrity gate,NOT_RUN
+TC-INJ-051,INJ-051,D08,Cold-chain lane excursion,supply_constraint_and_no_side_effect,shipments.csv; temperature_loggers.csv,Supply execution gate,NOT_RUN
+TC-INJ-052,INJ-052,D08,Serialization aggregation break,supply_constraint_and_no_side_effect,serialisation_events.csv; packaging_events.csv,Supply execution gate,NOT_RUN
+TC-INJ-053,INJ-053,D08,Counterfeit suspicion,supply_constraint_and_no_side_effect,returns.csv; serialisation_events.csv,Supply execution gate,NOT_RUN
+TC-INJ-054,INJ-054,D08,Critical excipient shortage,supply_constraint_and_no_side_effect,supplier_risks.csv; inventory.csv,Supply execution gate,NOT_RUN
+TC-INJ-055,INJ-055,D08,CMO capacity conflict,supply_constraint_and_no_side_effect,cmo_capacity.csv; vendor_contracts.csv,Supply execution gate,NOT_RUN
+TC-INJ-056,INJ-056,D08,Allocation ethics,supply_constraint_and_no_side_effect,demand_forecast.csv; inventory.csv; allocation_constraints.csv,Supply execution gate,NOT_RUN
+TC-INJ-057,INJ-057,D08,Customs documentation mismatch,supply_constraint_and_no_side_effect,shipments.csv; trade_documents.csv,Supply execution gate,NOT_RUN
+TC-INJ-058,INJ-058,D08,Recall-scope uncertainty,supply_constraint_and_no_side_effect,recall_candidates.csv; material_genealogy.csv,Supply execution gate,NOT_RUN
+TC-INJ-059,INJ-059,D09,Genomic re-identification risk,privacy_purpose_and_cross_border,genomic_data.csv; privacy_risk.csv,Privacy gate,NOT_RUN
+TC-INJ-060,INJ-060,D09,Cross-border secondary use,privacy_purpose_and_cross_border,consents.csv; data_exports.csv,Privacy gate,NOT_RUN
+TC-INJ-061,INJ-061,D09,Data-subject request versus GxP record,privacy_purpose_and_cross_border,deletion_requests.csv; retention_rules.csv,Privacy gate,NOT_RUN
+TC-INJ-062,INJ-062,D09,Patient-support programme leakage,privacy_purpose_and_cross_border,patient_support_cases.csv,Privacy gate,NOT_RUN
+TC-INJ-063,INJ-063,D09,Research-commercial boundary,privacy_purpose_and_cross_border,data_licenses.csv; commercial_use_requests.csv,Privacy gate,NOT_RUN
+TC-INJ-064,INJ-064,D09,Regional residency failure,privacy_purpose_and_cross_border,data_residency.csv; backup_inventory.csv,Privacy gate,NOT_RUN
+TC-INJ-065,INJ-065,D10,Prompt injection in SOP,security_zero_trust_and_agent_abuse,knowledge_catalog.csv; MALICIOUS_SUPPLIER_DEVIATION.md,Security gate,NOT_RUN
+TC-INJ-066,INJ-066,D10,Tool-manifest poisoning,security_zero_trust_and_agent_abuse,tool_catalog.csv; tool_manifest_poisoned.json,Security gate,NOT_RUN
+TC-INJ-067,INJ-067,D10,Entitlement revocation lag,security_zero_trust_and_agent_abuse,users_entitlements.csv; access_cache.csv,Security gate,NOT_RUN
+TC-INJ-068,INJ-068,D10,Safety-data exfiltration,security_zero_trust_and_agent_abuse,security_events.csv,Security gate,NOT_RUN
+TC-INJ-069,INJ-069,D10,Ransomware and OT segmentation,security_zero_trust_and_agent_abuse,downtime_events.csv; network_zones.csv,Security gate,NOT_RUN
+TC-INJ-070,INJ-070,D10,Model supply-chain compromise,security_zero_trust_and_agent_abuse,model_registry.csv; model_artifacts.csv,Security gate,NOT_RUN
+TC-INJ-071,INJ-071,D11,Automation bias in batch review,human_factors_subgroup_and_accessibility,candidate_outputs.csv; reviewer_feedback.csv,Responsible AI gate,NOT_RUN
+TC-INJ-072,INJ-072,D11,Language inequity,human_factors_subgroup_and_accessibility,model_performance.csv; icsr_cases.csv,Responsible AI gate,NOT_RUN
+TC-INJ-073,INJ-073,D11,Accessibility failure,human_factors_subgroup_and_accessibility,usability_findings.csv,Responsible AI gate,NOT_RUN
+TC-INJ-074,INJ-074,D11,Role conflict,human_factors_subgroup_and_accessibility,stakeholders.csv; decision_rights.csv,Responsible AI gate,NOT_RUN
+TC-INJ-075,INJ-075,D12,Model price shock,token_cost_and_vendor_economics,model_costs.csv; vendor_contracts.csv,FinOps gate,NOT_RUN
+TC-INJ-076,INJ-076,D12,Denial-of-wallet pattern,token_cost_and_vendor_economics,model_usage.csv; security_events.csv,FinOps gate,NOT_RUN
+TC-INJ-077,INJ-077,D12,Hidden human-review cost,token_cost_and_vendor_economics,cost_model.csv; staff_rates.csv,FinOps gate,NOT_RUN
+TC-INJ-078,INJ-078,D12,Vendor concentration,token_cost_and_vendor_economics,vendor_dependencies.csv,FinOps gate,NOT_RUN
+TC-INJ-079,INJ-079,D13,Regional platform outage,outage_recovery_exit_and_retirement,downtime_events.csv; model_endpoints.csv,Reliability gate,NOT_RUN
+TC-INJ-080,INJ-080,D13,Checkpoint corruption,outage_recovery_exit_and_retirement,agent_runs.csv,Reliability gate,NOT_RUN
+TC-INJ-081,INJ-081,D13,Model substitution regression,outage_recovery_exit_and_retirement,model_performance.csv; model_endpoints.csv,Reliability gate,NOT_RUN
+TC-INJ-082,INJ-082,D13,AI-disabled continuity,outage_recovery_exit_and_retirement,continuity_requirements.csv,Reliability gate,NOT_RUN
+TC-INJ-083,INJ-083,D13,Vendor exit deadline,outage_recovery_exit_and_retirement,vendor_contracts.csv; vendor_exit_assets.csv,Reliability gate,NOT_RUN
+TC-INJ-084,INJ-084,D13,Retirement and evidence preservation,outage_recovery_exit_and_retirement,retention_rules.csv; retirement_assets.csv,Reliability gate,NOT_RUN

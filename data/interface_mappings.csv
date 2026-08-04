@@ -1,0 +1,2 @@
+interface,source_unit,target_unit,conversion_rule,approved
+CRO_LAB_TO_LIMS,mg/L,ug/mL,1:1_assumed,no

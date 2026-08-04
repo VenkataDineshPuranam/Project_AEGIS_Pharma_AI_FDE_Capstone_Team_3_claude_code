@@ -1,0 +1,4 @@
+zone,trust,connectivity
+OT_FILL_FINISH,restricted,isolated during incident
+GXP_APP,controlled,degraded
+AI_CLOUD,external,unavailable primary

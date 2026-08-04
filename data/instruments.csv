@@ -1,0 +1,2 @@
+instrument_id,type,firmware,qualified_firmware,qualification_status
+INS-03,plate_reader,4.8.1,4.7.9,conditional

@@ -1,0 +1,109 @@
+{
+  "scenario": {
+    "id": "PUB-14",
+    "workflow": "finops",
+    "prompt": "Calculate cost per successful task including human review.",
+    "focus": [
+      "full TCO",
+      "review cost",
+      "token efficiency"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/model_usage.csv",
+    "data/model_costs.csv",
+    "data/cost_model.csv",
+    "data/staff_rates.csv"
+  ],
+  "evidence": [
+    {
+      "source": "data/model_usage.csv",
+      "sha256": "9a7b4a2a20c1191360f7d18b16b1b483ede38fcf73da904a03f52ea0381a986a",
+      "records": [
+        {
+          "workflow": "batch_review",
+          "requests": "1900",
+          "input_tokens": "5800000",
+          "output_tokens": "850000",
+          "successful_tasks": "1110"
+        },
+        {
+          "workflow": "pv_intake",
+          "requests": "4200",
+          "input_tokens": "9200000",
+          "output_tokens": "1700000",
+          "successful_tasks": "2800"
+        }
+      ]
+    },
+    {
+      "source": "data/model_costs.csv",
+      "sha256": "fef2d7d9fe8b9614643d3103018ab55a33c19a46e858389ee0148e2eb3062456",
+      "records": [
+        {
+          "vendor": "AIVENDOR-X",
+          "model": "large-1",
+          "input_per_million": "8.50",
+          "previous": "5.00",
+          "output_per_million": "22.00"
+        },
+        {
+          "vendor": "LOCAL-SLM",
+          "model": "small-7b",
+          "input_per_million": "0.80",
+          "previous": "0.80",
+          "output_per_million": "1.20"
+        }
+      ]
+    },
+    {
+      "source": "data/cost_model.csv",
+      "sha256": "c117382cbb28514fce792fe3ad19f24bf39404f7a8d8ae8714a63641056bd0b5",
+      "records": [
+        {
+          "cost_type": "inference",
+          "monthly_usd": "184000"
+        },
+        {
+          "cost_type": "human_quality_review",
+          "monthly_usd": "0"
+        },
+        {
+          "cost_type": "medical_review",
+          "monthly_usd": "0"
+        },
+        {
+          "cost_type": "observability",
+          "monthly_usd": "31000"
+        }
+      ]
+    },
+    {
+      "source": "data/staff_rates.csv",
+      "sha256": "bfd80c0e5c306e563d802db4951ffbaca5a67185e0eb78d71295ba1b7191a5fd",
+      "records": [
+        {
+          "role": "Quality reviewer",
+          "loaded_hourly_usd": "92"
+        },
+        {
+          "role": "Safety physician",
+          "loaded_hourly_usd": "165"
+        },
+        {
+          "role": "Regulatory strategist",
+          "loaded_hourly_usd": "148"
+        }
+      ]
+    }
+  ],
+  "response_contract": "advisory_nonexecuting",
+  "expected_answer_included": false
+}

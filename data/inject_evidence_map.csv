@@ -1,0 +1,85 @@
+inject_id,dimension,title,evidence_sources,participant_status
+INJ-001,D01,Board compression target,board_requests.csv; portfolio_products.csv,UNASSESSED
+INJ-002,D01,Conflicting success metrics,kpi_conflicts.csv; stakeholders.csv,UNASSESSED
+INJ-003,D01,No-AI challenge,no_ai_baselines.csv,UNASSESSED
+INJ-004,D01,Patent-cliff urgency,portfolio_products.csv; commercial_forecast.csv,UNASSESSED
+INJ-005,D01,Acquisition integration,organisations.csv; system_inventory.csv,UNASSESSED
+INJ-006,D01,Prohibited optimization,ai_use_boundaries.csv,UNASSESSED
+INJ-007,D02,Assay drift,assay_results.csv; instruments.csv; reagent_lots.csv,UNASSESSED
+INJ-008,D02,Compound genealogy collision,compounds.csv; substance_master.csv,UNASSESSED
+INJ-009,D02,Omics cohort bias,omics_cohorts.csv; model_performance.csv,UNASSESSED
+INJ-010,D02,Preclinical image manipulation concern,preclinical_studies.csv; image_forensics.csv,UNASSESSED
+INJ-011,D02,Unqualified research model,model_registry.csv,UNASSESSED
+INJ-012,D02,Target-evidence conflict,target_evidence.csv; data_licenses.csv,UNASSESSED
+INJ-013,D03,Protocol-version divergence,clinical_trials.csv; protocol_versions.csv; site_approvals.csv,UNASSESSED
+INJ-014,D03,Eligibility ambiguity,subjects.csv; eligibility_evidence.csv,UNASSESSED
+INJ-015,D03,Randomization service outage,randomization_events.csv; downtime_events.csv,UNASSESSED
+INJ-016,D03,Potential unblinding,support_tickets.csv; access_logs.csv,UNASSESSED
+INJ-017,D03,eConsent withdrawal mismatch,consents.csv; specimens.csv; processing_events.csv,UNASSESSED
+INJ-018,D03,Decentralized-device clock skew,wearable_readings.csv; timezone_rules.csv,UNASSESSED
+INJ-019,D03,Endpoint adjudication backlog,endpoint_packets.csv; imaging_reviews.csv,UNASSESSED
+INJ-020,D03,Site inspection risk,site_metrics.csv; access_logs.csv,UNASSESSED
+INJ-021,D04,Biologics batch genealogy break,batches.csv; material_genealogy.csv; warehouse_movements.csv,UNASSESSED
+INJ-022,D04,Sterility excursion,environmental_monitoring.csv; microbiology_results.csv,UNASSESSED
+INJ-023,D04,OOS/OOT disagreement,lab_results.csv; oos_investigations.csv,UNASSESSED
+INJ-024,D04,Unit conversion defect,lab_results.csv; interface_mappings.csv,UNASSESSED
+INJ-025,D04,Electronic batch record exception,ebr_steps.csv; downtime_events.csv,UNASSESSED
+INJ-026,D04,Cleaning validation boundary,cleaning_validation.csv; production_schedule.csv,UNASSESSED
+INJ-027,D04,Process analytical technology drift,pat_models.csv; recipes.csv,UNASSESSED
+INJ-028,D04,Qualified Person evidence gap,release_packets.csv; supplier_audits.csv,UNASSESSED
+INJ-029,D05,Audit-trail disabled,audit_trails.csv; privileged_sessions.csv,UNASSESSED
+INJ-030,D05,Shared laboratory account,access_logs.csv; staff_rosters.csv,UNASSESSED
+INJ-031,D05,Validation-state ambiguity,system_inventory.csv; validation_inventory.csv,UNASSESSED
+INJ-032,D05,Unapproved spreadsheet,spreadsheet_inventory.csv,UNASSESSED
+INJ-033,D05,CAPA effectiveness failure,deviations.csv; capa_records.csv,UNASSESSED
+INJ-034,D05,Change-control bypass,change_controls.csv; vendor_releases.csv,UNASSESSED
+INJ-035,D05,Record-retention conflict,retention_rules.csv; legal_holds.csv; deletion_requests.csv,UNASSESSED
+INJ-036,D05,ALCOA+ provenance break,certificates_analysis.csv; document_lineage.csv,UNASSESSED
+INJ-037,D06,ICSR duplicate cluster,icsr_cases.csv; duplicate_candidates.csv,UNASSESSED
+INJ-038,D06,Reporting-clock conflict,icsr_cases.csv; safety_receipts.csv,UNASSESSED
+INJ-039,D06,MedDRA version mismatch,adverse_events.csv; terminology_versions.csv,UNASSESSED
+INJ-040,D06,Expectedness source conflict,listedness_sources.csv; product_labels.csv,UNASSESSED
+INJ-041,D06,Pregnancy and paediatric sensitivity,icsr_cases.csv; sensitive_segments.csv,UNASSESSED
+INJ-042,D06,Social-media authenticity,social_listening.csv,UNASSESSED
+INJ-043,D06,Product-quality and safety link,product_complaints.csv; icsr_cases.csv,UNASSESSED
+INJ-044,D06,Signal disproportionality instability,signal_metrics.csv; exposure_estimates.csv,UNASSESSED
+INJ-045,D07,IDMP identity conflict,medicinal_products.csv; idmp_mappings.csv,UNASSESSED
+INJ-046,D07,Labeling divergence,product_labels.csv; market_authorisations.csv,UNASSESSED
+INJ-047,D07,Commitment deadline ambiguity,regulatory_commitments.csv; authority_correspondence.csv,UNASSESSED
+INJ-048,D07,eCTD sequence gap,ectd_sequences.csv; document_catalog.csv,UNASSESSED
+INJ-049,D07,Variation classification dispute,regulatory_changes.csv,UNASSESSED
+INJ-050,D07,Inspection request surge,inspection_requests.csv,UNASSESSED
+INJ-051,D08,Cold-chain lane excursion,shipments.csv; temperature_loggers.csv,UNASSESSED
+INJ-052,D08,Serialization aggregation break,serialisation_events.csv; packaging_events.csv,UNASSESSED
+INJ-053,D08,Counterfeit suspicion,returns.csv; serialisation_events.csv,UNASSESSED
+INJ-054,D08,Critical excipient shortage,supplier_risks.csv; inventory.csv,UNASSESSED
+INJ-055,D08,CMO capacity conflict,cmo_capacity.csv; vendor_contracts.csv,UNASSESSED
+INJ-056,D08,Allocation ethics,demand_forecast.csv; inventory.csv; allocation_constraints.csv,UNASSESSED
+INJ-057,D08,Customs documentation mismatch,shipments.csv; trade_documents.csv,UNASSESSED
+INJ-058,D08,Recall-scope uncertainty,recall_candidates.csv; material_genealogy.csv,UNASSESSED
+INJ-059,D09,Genomic re-identification risk,genomic_data.csv; privacy_risk.csv,UNASSESSED
+INJ-060,D09,Cross-border secondary use,consents.csv; data_exports.csv,UNASSESSED
+INJ-061,D09,Data-subject request versus GxP record,deletion_requests.csv; retention_rules.csv,UNASSESSED
+INJ-062,D09,Patient-support programme leakage,patient_support_cases.csv,UNASSESSED
+INJ-063,D09,Research-commercial boundary,data_licenses.csv; commercial_use_requests.csv,UNASSESSED
+INJ-064,D09,Regional residency failure,data_residency.csv; backup_inventory.csv,UNASSESSED
+INJ-065,D10,Prompt injection in SOP,knowledge_catalog.csv; MALICIOUS_SUPPLIER_DEVIATION.md,UNASSESSED
+INJ-066,D10,Tool-manifest poisoning,tool_catalog.csv; tool_manifest_poisoned.json,UNASSESSED
+INJ-067,D10,Entitlement revocation lag,users_entitlements.csv; access_cache.csv,UNASSESSED
+INJ-068,D10,Safety-data exfiltration,security_events.csv,UNASSESSED
+INJ-069,D10,Ransomware and OT segmentation,downtime_events.csv; network_zones.csv,UNASSESSED
+INJ-070,D10,Model supply-chain compromise,model_registry.csv; model_artifacts.csv,UNASSESSED
+INJ-071,D11,Automation bias in batch review,candidate_outputs.csv; reviewer_feedback.csv,UNASSESSED
+INJ-072,D11,Language inequity,model_performance.csv; icsr_cases.csv,UNASSESSED
+INJ-073,D11,Accessibility failure,usability_findings.csv,UNASSESSED
+INJ-074,D11,Role conflict,stakeholders.csv; decision_rights.csv,UNASSESSED
+INJ-075,D12,Model price shock,model_costs.csv; vendor_contracts.csv,UNASSESSED
+INJ-076,D12,Denial-of-wallet pattern,model_usage.csv; security_events.csv,UNASSESSED
+INJ-077,D12,Hidden human-review cost,cost_model.csv; staff_rates.csv,UNASSESSED
+INJ-078,D12,Vendor concentration,vendor_dependencies.csv,UNASSESSED
+INJ-079,D13,Regional platform outage,downtime_events.csv; model_endpoints.csv,UNASSESSED
+INJ-080,D13,Checkpoint corruption,agent_runs.csv,UNASSESSED
+INJ-081,D13,Model substitution regression,model_performance.csv; model_endpoints.csv,UNASSESSED
+INJ-082,D13,AI-disabled continuity,continuity_requirements.csv,UNASSESSED
+INJ-083,D13,Vendor exit deadline,vendor_contracts.csv; vendor_exit_assets.csv,UNASSESSED
+INJ-084,D13,Retirement and evidence preservation,retention_rules.csv; retirement_assets.csv,UNASSESSED

@@ -1,0 +1,10 @@
+{
+  "id": "LR-88",
+  "subject": {
+    "type": "Batch",
+    "id": "NCB204-B24071"
+  },
+  "numericValue": 0.92,
+  "ucumCode": "mg/L",
+  "lifecycleState": "investigation-open"
+}

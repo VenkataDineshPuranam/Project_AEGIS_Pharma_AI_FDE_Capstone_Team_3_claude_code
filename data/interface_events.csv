@@ -1,0 +1,3 @@
+interface,event,retry_count,idempotency_key
+MES-QMS,timeout,7,missing
+PV-vendor,duplicate_delivery,3,case_vendor_ref

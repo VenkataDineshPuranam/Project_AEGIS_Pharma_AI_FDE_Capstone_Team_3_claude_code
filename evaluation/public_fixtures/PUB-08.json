@@ -1,0 +1,83 @@
+{
+  "scenario": {
+    "id": "PUB-08",
+    "workflow": "supply",
+    "prompt": "Assess SH-901 cold-chain evidence.",
+    "focus": [
+      "logger-pallet mismatch",
+      "clock normalization",
+      "quality assessment required"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/shipments.csv",
+    "data/temperature_loggers.csv",
+    "source_documents/Cold_chain_logger_association_SH_901.md",
+    "knowledge/COLD_CHAIN_ASSESSMENT.md"
+  ],
+  "evidence": [
+    {
+      "source": "data/shipments.csv",
+      "sha256": "d26f835d400a85a7ba2b01c840a4a5f4f7b72dd677a91f08f8164ce7a5c3b97d",
+      "records": [
+        {
+          "shipment_id": "SH-901",
+          "product": "NCB-204",
+          "lots": "NCB204-B24062",
+          "lane": "IE>DE",
+          "status": "quarantine",
+          "logger": "LG-31",
+          "pallet": "P-88"
+        },
+        {
+          "shipment_id": "SH-902",
+          "product": "NCS-310",
+          "lots": "NCS310-S26031",
+          "lane": "IN>AE",
+          "status": "customs_hold",
+          "logger": "LG-42",
+          "pallet": "P-92"
+        }
+      ]
+    },
+    {
+      "source": "data/temperature_loggers.csv",
+      "sha256": "0b9fdaa37221bd156b00613ebb6b92dcb3c97a77f29358ddac737a657b829b57",
+      "records": [
+        {
+          "logger": "LG-31",
+          "timestamp": "2026-07-29 02:10",
+          "timezone": "local_unknown",
+          "temp_c": "10.8",
+          "pallet": "P-89"
+        },
+        {
+          "logger": "LG-31",
+          "timestamp": "2026-07-29T01:15:00Z",
+          "timezone": "UTC",
+          "temp_c": "9.7",
+          "pallet": "P-88"
+        }
+      ]
+    },
+    {
+      "source": "source_documents/Cold_chain_logger_association_SH_901.md",
+      "sha256": "52a3f5d23efb3e63078a2cc8255c4ac88168e30682b5f2009c743ac0487ce9ac",
+      "text": "# Synthetic Logger Association Note — SH-901\n\n- Shipment pallet in logistics record: P-88\n- Assigned logger: LG-31\n- Exception: one LG-31 record is associated to P-89 and uses an unknown local timezone\n\nAssociation and time normalization require investigation. This note does not determine product usability or quality status.\n"
+    },
+    {
+      "source": "knowledge/COLD_CHAIN_ASSESSMENT.md",
+      "sha256": "b38c9b15ec5f30b209188d3aff2593acd4173aa5dc2ba0bfaa2ce4b194fcc2ec",
+      "text": "# Cold Chain Assessment\n\n## Document control\n\n- Document ID: K-009\n- Status: approved\n- Effective date: 2026-04-30\n- Synthetic authority: NovaCura Global Policy\n- Training classification: scenario evidence; not a real controlled document\n\n## Purpose and scope\n\nDefines logger association, time normalization and Quality assessment boundaries.\n\n## Mandatory controls\n\n- Verify shipment, pallet and logger association.\n- Normalize time only when source timezone evidence is sufficient.\n- Escalate excursions to authorized Quality assessment; do not change quality status.\n\n## Evidence expected\n\n- Source identity, version, effective date, responsible owner and retrieval time.\n- Input records, transformations, conflicts, gaps, reviewer actions and resulting audit events.\n- Any exception, escalation, override or residual risk with accountable approval.\n\n## Prohibited use\n\n- Do not treat this document as authority outside its status, jurisdiction, intended scope or effective period.\n- Do not infer a regulated decision, execute a side effect, or hide conflicting evidence.\n\n## Retrieval and conflict handling\n\nThe consumer must expose status, authority and effective date; detect supersession or untrusted content; cite the exact source; and abstain or escalate when applicability cannot be established.\n\nThis document is part of a fictional training scenario. Participants must determine authority, applicability, supersession and permitted use.\n"
+    }
+  ],
+  "response_contract": "supply_response.schema.json",
+  "expected_answer_included": false
+}

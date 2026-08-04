@@ -1,0 +1,5 @@
+asset,status
+prompt_export,available
+embedding_export,not_supported
+evaluation_history,PDF_only
+tool_audit,partial

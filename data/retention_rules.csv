@@ -1,0 +1,4 @@
+record_type,rule,action
+clinical_trial_source,25 years EU minimum scenario,retain
+ICSR,PV lifecycle retention,retain
+AI prompt logs,privacy minimisation,delete after 90 days unless evidence hold

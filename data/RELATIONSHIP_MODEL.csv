@@ -1,0 +1,56 @@
+child_dataset,child_field,parent_dataset,parent_field,rule,notes
+subjects.csv,trial_id,clinical_trials.csv,trial_id,required,Subject trial must exist
+subjects.csv,site_id,site_approvals.csv,site_id,required,Subject site context must exist
+consents.csv,subject_id,subjects.csv,subject_id,required,Consent subject must exist
+specimens.csv,subject_id,subjects.csv,subject_id,required,Specimen subject must exist
+processing_events.csv,specimen_id,specimens.csv,specimen_id,required,Processing event specimen must exist
+eligibility_evidence.csv,subject_id,subjects.csv,subject_id,required,Eligibility evidence subject must exist
+site_approvals.csv,trial_id,clinical_trials.csv,trial_id,required,Site approval trial must exist
+protocol_versions.csv,trial_id,clinical_trials.csv,trial_id,required,Protocol trial must exist
+material_genealogy.csv,batch_id,batches.csv,batch_id,required,Genealogy batch must exist
+warehouse_movements.csv,batch_id,batches.csv,batch_id,required,Movement batch must exist
+lab_results.csv,batch_id,batches.csv,batch_id,required,Lab result batch must exist
+oos_investigations.csv,result_id,lab_results.csv,result_id,required,OOS result must exist
+release_packets.csv,batch_id,batches.csv,batch_id,required,Release packet batch must exist
+product_complaints.csv,lot,batches.csv,batch_id,required,Complaint lot must exist
+adverse_events.csv,case_id,icsr_cases.csv,case_id,required,Adverse-event case must exist
+duplicate_candidates.csv,case_a,icsr_cases.csv,case_id,required,Duplicate case A must exist
+duplicate_candidates.csv,case_b,icsr_cases.csv,case_id,required,Duplicate case B must exist
+safety_receipts.csv,case_id,icsr_cases.csv,case_id,required,Receipt case must exist
+sensitive_segments.csv,case_id,icsr_cases.csv,case_id,declared_exception,PV-1020 is a deliberately absent restricted case stub
+reviewer_feedback.csv,output_id,candidate_outputs.csv,output_id,required,Feedback output must exist
+shipments.csv,logger,temperature_loggers.csv,logger,optional,Only cold-chain-assessed shipments require supplied logger readings; LG-42 has no readings in this case.
+trade_documents.csv,shipment_id,shipments.csv,shipment_id,required,Trade document shipment must exist
+returns.csv,serial,serialisation_events.csv,serial,required,Return serial must exist
+market_authorisations.csv,product,portfolio_products.csv,product_id,required,Market product must exist
+product_labels.csv,product,portfolio_products.csv,product_id,required,Label product must exist
+model_performance.csv,model_id,model_registry.csv,model_id,required,Performance model must exist
+model_artifacts.csv,model_id,model_registry.csv,model_id,required,Artifact model must exist
+users_entitlements.csv,user,access_cache.csv,user,optional,Cache only exists for selected users
+knowledge_catalog.csv,file,knowledge/*.md,filename,required,Catalog must cover every knowledge document
+inject_evidence_map.csv,inject_id,injects.json,id,required,Inject mapping must exist
+assay_results.csv,reagent_lot,reagent_lots.csv,reagent_lot,required,Assay reagent lot must exist
+assay_results.csv,instrument,instruments.csv,instrument_id,required,Assay instrument must exist
+image_forensics.csv,study_id,preclinical_studies.csv,study_id,required,Forensic record study must exist
+randomization_events.csv,subject_id,subjects.csv,subject_id,required,Randomization subject must exist
+endpoint_packets.csv,subject_id,subjects.csv,subject_id,required,Endpoint packet subject must exist
+imaging_reviews.csv,packet_id,endpoint_packets.csv,packet_id,required,Imaging review packet must exist
+ebr_steps.csv,batch_id,batches.csv,batch_id,required,eBR step batch must exist
+environmental_monitoring.csv,batch_id,batches.csv,batch_id,required,Environmental sample batch must exist
+microbiology_results.csv,sample_id,environmental_monitoring.csv,sample_id,required,Microbiology correction sample must exist
+deviations.csv,capa,capa_records.csv,capa_id,optional,Closed deviation may reference a CAPA; blank is allowed
+deviations.csv,similarity_to,deviations.csv,deviation_id,optional,Similarity reference is optional
+ectd_sequences.csv,product,portfolio_products.csv,product_id,required,eCTD product must exist
+regulatory_commitments.csv,commitment_id,authority_correspondence.csv,commitment_id,required,Commitment correspondence must exist
+commercial_use_requests.csv,dataset,data_licenses.csv,dataset,required,Commercial-use dataset must exist in license inventory
+privacy_risk.csv,dataset,genomic_data.csv,__filename__,declared_exception,"Dataset-level risk points to filename, not a row key"
+environmental_monitoring.csv,sample_id,microbiology_results.csv,sample_id,required,Environmental sample has microbiology record in this case
+warehouse_movements.csv,material_lot,material_genealogy.csv,material_lot,required,Warehouse lot must appear in genealogy evidence
+listedness_sources.csv,product,portfolio_products.csv,product_id,required,Listedness product must exist
+shipments.csv,product,portfolio_products.csv,product_id,required,Shipment product must exist
+demand_forecast.csv,product,portfolio_products.csv,product_id,required,Demand product must exist
+inventory.csv,product,portfolio_products.csv,product_id,required,Inventory product must exist
+commercial_forecast.csv,product_id,portfolio_products.csv,product_id,required,Forecast product must exist
+recall_candidates.csv,lot,batches.csv,batch_id,declared_exception,NCS310-S26031 is a distributed related lot not included in batch master extract
+temperature_loggers.csv,logger,shipments.csv,logger,required,Supplied logger readings must map to a shipment logger
+model_usage.csv,workflow,continuity_requirements.csv,workflow,declared_exception,Naming differs: batch_review and pv_intake align; supply has no usage row

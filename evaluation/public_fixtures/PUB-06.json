@@ -1,0 +1,115 @@
+{
+  "scenario": {
+    "id": "PUB-06",
+    "workflow": "pv",
+    "prompt": "Reconcile listedness for NCB-204 across regions.",
+    "focus": [
+      "IB/CCDS/local label",
+      "context",
+      "effective version"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/listedness_sources.csv",
+    "data/product_labels.csv",
+    "data/market_authorisations.csv",
+    "source_documents/CCDS_NCB204_v4.md",
+    "knowledge/PV_LISTEDNESS_AUTHORITY.md"
+  ],
+  "evidence": [
+    {
+      "source": "data/listedness_sources.csv",
+      "sha256": "2a0e9d178da932846e9a69caa7dbdf2e152ba606f165a2b39a23eccb2d1590b5",
+      "records": [
+        {
+          "product": "NCB-204",
+          "source": "IB v12",
+          "risk": "anaphylaxis",
+          "listed": "yes"
+        },
+        {
+          "product": "NCB-204",
+          "source": "CCDS v4",
+          "risk": "anaphylaxis",
+          "listed": "yes"
+        },
+        {
+          "product": "NCB-204",
+          "source": "IN local label",
+          "risk": "anaphylaxis",
+          "listed": "no"
+        }
+      ]
+    },
+    {
+      "source": "data/product_labels.csv",
+      "sha256": "7794ea3f0acbddb3c7df721ccfd9e38c0f6c9380917f10a689ee29dbbe569e3d",
+      "records": [
+        {
+          "product": "NCB-204",
+          "market": "EU",
+          "version": "6",
+          "risk_text": "severe infusion reactions including anaphylaxis",
+          "status": "approved"
+        },
+        {
+          "product": "NCB-204",
+          "market": "US",
+          "version": "5",
+          "risk_text": "serious infusion reactions",
+          "status": "approved"
+        },
+        {
+          "product": "NCB-204",
+          "market": "IN",
+          "version": "3",
+          "risk_text": "infusion reactions",
+          "status": "approved"
+        }
+      ]
+    },
+    {
+      "source": "data/market_authorisations.csv",
+      "sha256": "d4cdc3063897d0148bed789bade104ae80104fd1351167ba8140681ce734f261",
+      "records": [
+        {
+          "product": "NCB-204",
+          "market": "EU",
+          "status": "authorised",
+          "label_version": "6"
+        },
+        {
+          "product": "NCB-204",
+          "market": "US",
+          "status": "authorised",
+          "label_version": "5"
+        },
+        {
+          "product": "NCB-204",
+          "market": "IN",
+          "status": "authorised",
+          "label_version": "3"
+        }
+      ]
+    },
+    {
+      "source": "source_documents/CCDS_NCB204_v4.md",
+      "sha256": "4d3767158d5b84871972bde516e9746073ef05a76d393775fa0783b2c8335008",
+      "text": "# Synthetic CCDS Extract — NCB-204 Version 4\n\n- Status: approved\n- Effective date: 2026-03-18\n- Owner: Global Safety and Labeling\n\nThe core safety information lists anaphylaxis under important identified risks. Local listedness and reporting assessment must use the applicable country label and case context; this extract does not make a case-level expectedness decision.\n"
+    },
+    {
+      "source": "knowledge/PV_LISTEDNESS_AUTHORITY.md",
+      "sha256": "6cca5cdee7c4cea401fe3699cf59206c9f0833953a144fd64ffaf7bb4335d97e",
+      "text": "# Pv Listedness Authority\n\n## Document control\n\n- Document ID: K-022\n- Status: approved\n- Effective date: 2026-03-18\n- Synthetic authority: NovaCura Global Policy\n- Training classification: scenario evidence; not a real controlled document\n\n## Purpose and scope\n\nDefines CCDS, IB and local label authority by context.\n\n## Mandatory controls\n\n- Select source by case context, product, indication, market and effective date.\n- Preserve IB, CCDS and local label differences.\n- Reserve final expectedness determination to authorized review.\n\n## Evidence expected\n\n- Source identity, version, effective date, responsible owner and retrieval time.\n- Input records, transformations, conflicts, gaps, reviewer actions and resulting audit events.\n- Any exception, escalation, override or residual risk with accountable approval.\n\n## Prohibited use\n\n- Do not treat this document as authority outside its status, jurisdiction, intended scope or effective period.\n- Do not infer a regulated decision, execute a side effect, or hide conflicting evidence.\n\n## Retrieval and conflict handling\n\nThe consumer must expose status, authority and effective date; detect supersession or untrusted content; cite the exact source; and abstain or escalate when applicability cannot be established.\n\nThis document is part of a fictional training scenario. Participants must determine authority, applicability, supersession and permitted use.\n"
+    }
+  ],
+  "response_contract": "pv_response.schema.json",
+  "expected_answer_included": false
+}

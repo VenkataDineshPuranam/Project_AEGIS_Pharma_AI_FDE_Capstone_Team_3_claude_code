@@ -1,0 +1,5 @@
+document_id,document,local_path,authority,effective_date,status,availability,notes
+DOC-ECTD-1,m3-2-s-4-1-analytical.pdf,,Regulatory submission archive,unknown,referenced_missing,intentionally_absent,Sequence references a file not present; investigate without fabrication.
+DOC-CCDS-4,CCDS_NCB204_v4.pdf,source_documents/CCDS_NCB204_v4.md,Global Safety and Labeling,2026-03-18,approved,synthetic_extract,Training extract; local label context still required.
+DOC-EMA-114,EMA_letter_2026_114.pdf,source_documents/EMA_letter_2026_114.md,Regulatory correspondence archive,2026-07-28,received,synthetic_extract,Due-date interpretation is intentionally unresolved.
+DOC-AUD-14,CMO_audit_commitment_2025_14.pdf,source_documents/CMO_audit_commitment_2025_14.md,Supplier Quality,2025-12-18,open_verification,synthetic_extract,Supplier closure claim lacks NTG verification.

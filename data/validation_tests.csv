@@ -1,0 +1,3 @@
+test_id,system,requirement,result
+VT-1,AI-EVIDENCE,citation provenance,fail_on_superseded_doc
+VT-2,AI-EVIDENCE,role revocation,fail_cached_access

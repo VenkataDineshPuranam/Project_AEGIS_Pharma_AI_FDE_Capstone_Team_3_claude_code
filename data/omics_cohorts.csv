@@ -1,0 +1,3 @@
+cohort,ancestry_group,n,positive_rate
+OM-TRAIN,Group-A,812,0.44
+OM-TEST-B,Group-B,91,0.21

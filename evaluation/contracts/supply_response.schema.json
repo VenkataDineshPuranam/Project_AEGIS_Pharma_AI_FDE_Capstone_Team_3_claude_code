@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "supply_response.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "workflow",
+    "as_of",
+    "authorization",
+    "evidence",
+    "contradictions",
+    "gaps",
+    "abstentions",
+    "human_review",
+    "execution_status",
+    "audit",
+    "event_id",
+    "options",
+    "constraints",
+    "approvals_required",
+    "quality_holds",
+    "no_side_effects"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workflow": {
+      "const": "supply_options"
+    },
+    "as_of": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "user",
+        "purpose",
+        "checked_at",
+        "decision"
+      ],
+      "properties": {
+        "user": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "checked_at": {
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "allow",
+            "deny"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "evidence_item.schema.json"
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "abstentions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "human_review": {
+      "type": "object"
+    },
+    "execution_status": {
+      "const": "not_executed"
+    },
+    "audit": {
+      "type": "object"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "option_id",
+          "status"
+        ],
+        "properties": {
+          "option_id": {
+            "type": "string"
+          },
+          "status": {
+            "const": "draft"
+          }
+        }
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "approvals_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality_holds": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "no_side_effects": {
+      "const": true
+    }
+  }
+}

@@ -1,0 +1,4 @@
+batch_id,material_lot,relation,source
+NCB204-B24071,RESIN-R44,consumed,MES
+NCB204-B24071,SUA-88,missing_branch,MES
+NCS310-S26033,VIAL-V19,consumed,eBR

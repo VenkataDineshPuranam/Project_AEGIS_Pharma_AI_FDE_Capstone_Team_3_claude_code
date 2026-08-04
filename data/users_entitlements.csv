@@ -1,0 +1,3 @@
+user,role,iam_state,ai_gateway_state
+contractor_77,supplier_quality_viewer,revoked,active_cached
+qp_eu_1,qualified_person,active,active

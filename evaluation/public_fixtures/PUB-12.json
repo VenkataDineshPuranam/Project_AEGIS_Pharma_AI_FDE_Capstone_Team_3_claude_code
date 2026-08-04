@@ -1,0 +1,79 @@
+{
+  "scenario": {
+    "id": "PUB-12",
+    "workflow": "integration",
+    "prompt": "Reconcile LIMS v1 and v2 results without silent conversion.",
+    "focus": [
+      "contract version",
+      "UCUM",
+      "schema validation"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/api_contract_versions.csv",
+    "data/interface_mappings.csv",
+    "source_documents/LIMS_result_contract_v1.md",
+    "source_documents/LIMS_result_contract_v2.md"
+  ],
+  "evidence": [
+    {
+      "source": "data/api_contract_versions.csv",
+      "sha256": "a4e6f83b55fe5dae841d307c2a194e75c8c9a8f3ae5ca9ee1418a90e85df0560",
+      "records": [
+        {
+          "api": "LIMS result",
+          "version": "v1",
+          "unit_field": "unit",
+          "status_field": "status",
+          "date_semantics": ""
+        },
+        {
+          "api": "LIMS result",
+          "version": "v2",
+          "unit_field": "ucum_code",
+          "status_field": "lifecycleState",
+          "date_semantics": ""
+        },
+        {
+          "api": "Safety ICSR",
+          "version": "E2B_R3",
+          "unit_field": "",
+          "status_field": "",
+          "date_semantics": "precision variable"
+        }
+      ]
+    },
+    {
+      "source": "data/interface_mappings.csv",
+      "sha256": "113e85ae0f1a37ebd3196d04ead3d68f30a908282f38234907fae2b8d1eca4bd",
+      "records": [
+        {
+          "interface": "CRO_LAB_TO_LIMS",
+          "source_unit": "mg/L",
+          "target_unit": "ug/mL",
+          "conversion_rule": "1:1_assumed",
+          "approved": "no"
+        }
+      ]
+    },
+    {
+      "source": "source_documents/LIMS_result_contract_v1.md",
+      "sha256": "c527573d748a47fd83bc2a343990f0d31a808a1adebd2188f122dea6fc1635f8",
+      "text": "# Synthetic LIMS Result Contract v1\n\nFields: `result_id`, `batch_id`, `test`, `value`, `unit`, `spec`, `status`. Units are free text and must not be silently normalized. Status values are source-system values.\n"
+    },
+    {
+      "source": "source_documents/LIMS_result_contract_v2.md",
+      "sha256": "57bdbe6b4c3ead2c3f00cb738f2db72a23d10e793f7397076c4cd212858b6fba",
+      "text": "# Synthetic LIMS Result Contract v2\n\nFields include `resultId`, `batchId`, `testCode`, `numericValue`, `ucumCode`, `specificationId`, `lifecycleState`, `observedAt`. Contract version and UCUM validation are mandatory.\n"
+    }
+  ],
+  "response_contract": "advisory_nonexecuting",
+  "expected_answer_included": false
+}

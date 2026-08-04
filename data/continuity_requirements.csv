@@ -1,0 +1,4 @@
+workflow,max_ai_outage_days,manual_runbook,max_ai_outage_hours
+batch_review,14,required,
+pv_intake,,required,0
+supply_planning,14,required,

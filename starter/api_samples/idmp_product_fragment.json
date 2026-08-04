@@ -1,0 +1,10 @@
+{
+  "medicinalProductId": "NCB-204",
+  "doseForm": "concentrate_for_infusion",
+  "ingredient": [
+    {
+      "substance": "SUB-204",
+      "strength": "100 mg/10 mL"
+    }
+  ]
+}

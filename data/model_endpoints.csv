@@ -1,0 +1,3 @@
+endpoint,region,status,model
+primary_large,EU-West,down,large-1
+fallback_small,OnPrem-DE,available,small-7b

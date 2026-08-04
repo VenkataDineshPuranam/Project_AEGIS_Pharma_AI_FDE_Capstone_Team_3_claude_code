@@ -1,0 +1,2 @@
+sample_id,batch_id,location,cfu,alert_limit,time
+EM-501,NCS310-S26033,FF-GradeB-07,4,3,2026-07-22T18:10:00+05:30

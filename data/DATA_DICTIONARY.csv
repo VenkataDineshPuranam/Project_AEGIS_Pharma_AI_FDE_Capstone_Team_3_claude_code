@@ -1,0 +1,603 @@
+dataset,column,inferred_type,description,nullable_observed,example
+access_cache.csv,user,string,User or account identifier,no,contractor_77
+access_cache.csv,cached_until,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-08-03T10:00:00Z
+access_cache.csv,revoked_at,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-08-01T05:00:00Z
+access_logs.csv,event_id,string,Identifier,no,AL-1
+access_logs.csv,user,string,User or account identifier,no,lab_shared_night
+access_logs.csv,system,string,Synthetic source field; interpret in dataset and case context,no,CDS
+access_logs.csv,time,date_or_datetime,Source event time,no,2026-07-23T23:15:00Z
+access_logs.csv,action,string,Synthetic source field; interpret in dataset and case context,no,approve_sequence
+adverse_events.csv,case_id,string,Identifier,no,PV-1001
+adverse_events.csv,verbatim,string,Synthetic source field; interpret in dataset and case context,no,anaphylactic reaction
+adverse_events.csv,meddra_version,number,Source version,no,27.1
+adverse_events.csv,pt,string,Synthetic source field; interpret in dataset and case context,no,Anaphylactic reaction
+agent_runs.csv,run_id,string,Identifier,no,AR-77
+agent_runs.csv,workflow,string,Synthetic source field; interpret in dataset and case context,no,supply_recovery
+agent_runs.csv,checkpoint,string,Synthetic source field; interpret in dataset and case context,no,cp-4
+agent_runs.csv,state_age_minutes,integer,Synthetic source field; interpret in dataset and case context,no,380
+agent_runs.csv,draft_reservations,string,Synthetic source field; interpret in dataset and case context,no,DR-1;DR-2
+agent_runs.csv,resume_result,string,Synthetic source field; interpret in dataset and case context,no,duplicates_created
+ai_use_boundaries.csv,use_case,string,Synthetic source field; interpret in dataset and case context,no,batch evidence
+ai_use_boundaries.csv,allowed,string,Synthetic source field; interpret in dataset and case context,no,"reconcile, cite, flag, abstain"
+ai_use_boundaries.csv,prohibited,string,Synthetic source field; interpret in dataset and case context,no,release/reject/reprocess/recall
+allocation_constraints.csv,constraint,string,Synthetic source field; interpret in dataset and case context,no,quality_released_only
+allocation_constraints.csv,priority,string,Synthetic source field; interpret in dataset and case context,no,hard
+api_contract_versions.csv,api,string,Synthetic source field; interpret in dataset and case context,no,LIMS result
+api_contract_versions.csv,version,string,Source version,no,v1
+api_contract_versions.csv,unit_field,string,Reported unit; do not silently convert,yes,unit
+api_contract_versions.csv,status_field,string,Source-record lifecycle or business status,yes,status
+api_contract_versions.csv,date_semantics,string,Source-record date,yes,precision variable
+assay_results.csv,assay_id,string,Identifier,no,AS-100
+assay_results.csv,compound_code,string,Synthetic source field; interpret in dataset and case context,no,BX-17
+assay_results.csv,result,number,Synthetic source field; interpret in dataset and case context,no,84.2
+assay_results.csv,unit,string,Reported unit; do not silently convert,no,% potency
+assay_results.csv,reagent_lot,string,Synthetic source field; interpret in dataset and case context,no,RG-77
+assay_results.csv,instrument,string,Synthetic source field; interpret in dataset and case context,no,INS-03
+assay_results.csv,date,date_or_datetime,Source-record date,no,2026-07-18
+audit_findings.csv,finding_id,string,Identifier,no,AF-1
+audit_findings.csv,area,string,Synthetic source field; interpret in dataset and case context,no,data integrity
+audit_findings.csv,finding,string,Synthetic source field; interpret in dataset and case context,no,shared accounts and missing original records
+audit_findings.csv,status,string,Source-record lifecycle or business status,no,open
+audit_trails.csv,system,string,Synthetic source field; interpret in dataset and case context,no,LIMS-4
+audit_trails.csv,event,string,Synthetic source field; interpret in dataset and case context,no,audit_capture_disabled
+audit_trails.csv,start,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-07-26T00:11:00Z
+audit_trails.csv,end,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-07-26T00:58:00Z
+audit_trails.csv,user,string,User or account identifier,no,svc_admin
+authority_correspondence.csv,document,string,Synthetic source field; interpret in dataset and case context,no,EMA_letter_2026_114.pdf
+authority_correspondence.csv,local_path,string,Synthetic source field; interpret in dataset and case context,no,source_documents/EMA_letter_2026_114.md
+authority_correspondence.csv,commitment_id,string,Identifier,no,PMC-88
+authority_correspondence.csv,text_due_date,string,Source-record date,no,within 60 calendar days of receipt
+authority_correspondence.csv,tracker_due_date,date_or_datetime,Source-record date,no,2026-09-30
+authority_correspondence.csv,receipt_time,date_or_datetime,Source event time,no,2026-07-28T09:14:00Z
+backup_inventory.csv,system,string,Synthetic source field; interpret in dataset and case context,no,ClinicalLake
+backup_inventory.csv,primary,string,Synthetic source field; interpret in dataset and case context,no,DE
+backup_inventory.csv,backup,string,Synthetic source field; interpret in dataset and case context,no,SG
+backup_inventory.csv,encryption,boolean_like,Synthetic source field; interpret in dataset and case context,no,yes
+backup_inventory.csv,approval,string,Synthetic source field; interpret in dataset and case context,no,missing
+batches.csv,batch_id,string,Identifier,no,NCB204-B24071
+batches.csv,product_id,string,Identifier,no,NCB-204
+batches.csv,site,string,Synthetic source field; interpret in dataset and case context,no,CMO-IE
+batches.csv,status,string,Source-record lifecycle or business status,no,quality_hold
+batches.csv,manufacture_date,date_or_datetime,Source-record date,no,2026-07-10
+board_requests.csv,request_id,string,Identifier,no,BR-01
+board_requests.csv,metric,string,Synthetic source field; interpret in dataset and case context,no,release_lead_time
+board_requests.csv,target,number,Synthetic source field; interpret in dataset and case context,no,-14%
+board_requests.csv,constraint,string,Synthetic source field; interpret in dataset and case context,no,no specification or Quality-authority change
+board_requests.csv,due_date,date_or_datetime,Source-record date,no,2026-11-30
+candidate_outputs.csv,output_id,string,Identifier,no,CO-1
+candidate_outputs.csv,workflow,string,Synthetic source field; interpret in dataset and case context,no,batch_review
+candidate_outputs.csv,summary,string,Synthetic source field; interpret in dataset and case context,no,All critical evidence complete; recommend progression
+candidate_outputs.csv,omitted_fact,string,Synthetic source field; interpret in dataset and case context,no,open sterility excursion
+candidate_outputs.csv,status,string,Source-record lifecycle or business status,no,unsafe_candidate
+capa_records.csv,capa_id,string,Identifier,no,CAPA-31
+capa_records.csv,action,string,Synthetic source field; interpret in dataset and case context,no,operator retraining
+capa_records.csv,effectiveness_check,string,Synthetic source field; interpret in dataset and case context,no,no recurrence under code mixing_time
+capa_records.csv,result,string,Synthetic source field; interpret in dataset and case context,no,effective
+certificates_analysis.csv,coa_id,string,Identifier,no,COA-RG78
+certificates_analysis.csv,material_lot,string,Synthetic source field; interpret in dataset and case context,no,RG-78
+certificates_analysis.csv,source,string,Originating source,no,manual transcription
+certificates_analysis.csv,signature,string,Synthetic source field; interpret in dataset and case context,no,not available
+certificates_analysis.csv,value,number,Source-reported value,no,99.1%
+change_controls.csv,change_id,string,Identifier,no,CC-77
+change_controls.csv,system,string,Synthetic source field; interpret in dataset and case context,no,MES
+change_controls.csv,change,string,Synthetic source field; interpret in dataset and case context,no,vendor hotfix 11.2.4
+change_controls.csv,type,string,Synthetic source field; interpret in dataset and case context,no,emergency
+change_controls.csv,retrospective_approval,string,Synthetic source field; interpret in dataset and case context,no,missing
+cleaning_validation.csv,equipment,string,Synthetic source field; interpret in dataset and case context,no,BLEND-04
+cleaning_validation.csv,previous_product,string,Product identifier or alias,no,NCX-101
+cleaning_validation.csv,next_product,string,Product identifier or alias,no,HP-NEW
+cleaning_validation.csv,validation_scope,string,Identifier,no,NCX only
+cleaning_validation.csv,status,string,Source-record lifecycle or business status,no,gap
+clinical_trials.csv,trial_id,string,Identifier,no,NCB204-301
+clinical_trials.csv,phase,string,Synthetic source field; interpret in dataset and case context,no,III
+clinical_trials.csv,indication,string,Synthetic source field; interpret in dataset and case context,no,autoimmune disease
+clinical_trials.csv,status,string,Source-record lifecycle or business status,no,recruiting
+clinical_trials.csv,countries,string,Synthetic source field; interpret in dataset and case context,no,"US,DE,IN,AE"
+cmo_capacity.csv,cmo,string,Synthetic source field; interpret in dataset and case context,no,CMO-IE
+cmo_capacity.csv,window,string,Synthetic source field; interpret in dataset and case context,no,2026-W34
+cmo_capacity.csv,capacity_batches,integer,Batch or lot identifier,no,2
+cmo_capacity.csv,promised_NTG,integer,Synthetic source field; interpret in dataset and case context,no,2
+cmo_capacity.csv,promised_other_sponsor,integer,Synthetic source field; interpret in dataset and case context,no,1
+commercial_forecast.csv,product_id,string,Identifier,no,NCX-101
+commercial_forecast.csv,market,string,Synthetic source field; interpret in dataset and case context,no,EU
+commercial_forecast.csv,annual_units,integer,Reported unit; do not silently convert,no,310000
+commercial_forecast.csv,forecast_confidence,number,Identifier,no,0.62
+commercial_use_requests.csv,request_id,string,Identifier,no,CU-11
+commercial_use_requests.csv,dataset,string,Synthetic source field; interpret in dataset and case context,no,LIC-OMX-4
+commercial_use_requests.csv,proposed_use,string,Synthetic source field; interpret in dataset and case context,no,HCP segmentation
+commercial_use_requests.csv,status,string,Source-record lifecycle or business status,no,pending
+compounds.csv,compound_code,string,Synthetic source field; interpret in dataset and case context,no,BX-17
+compounds.csv,source_org,string,Originating source,no,BIOX
+compounds.csv,structure_hash,string,Integrity hash,no,abc91
+compounds.csv,salt_form,string,Synthetic source field; interpret in dataset and case context,no,mesylate
+consents.csv,consent_id,string,Identifier,no,C-044
+consents.csv,subject_id,string,Identifier,no,S-301-044
+consents.csv,purpose,string,Synthetic source field; interpret in dataset and case context,no,trial_and_biomarker
+consents.csv,status,string,Source-record lifecycle or business status,no,withdrawn_biomarker
+consents.csv,effective_time,date_or_datetime,Source event time,no,2026-07-20T10:15:00+05:30
+continuity_requirements.csv,workflow,string,Synthetic source field; interpret in dataset and case context,no,batch_review
+continuity_requirements.csv,max_ai_outage_days,integer,Synthetic source field; interpret in dataset and case context,yes,14
+continuity_requirements.csv,manual_runbook,string,Synthetic source field; interpret in dataset and case context,no,required
+continuity_requirements.csv,max_ai_outage_hours,integer,Synthetic source field; interpret in dataset and case context,yes,0
+controlled_vocabularies.csv,domain,string,Synthetic source field; interpret in dataset and case context,no,dose_form
+controlled_vocabularies.csv,code,string,Synthetic source field; interpret in dataset and case context,no,DF-001
+controlled_vocabularies.csv,term,string,Synthetic source field; interpret in dataset and case context,no,concentrate for solution for infusion
+controlled_vocabularies.csv,version,string,Source version,no,2026-1
+cost_model.csv,cost_type,string,Synthetic source field; interpret in dataset and case context,no,inference
+cost_model.csv,monthly_usd,integer,Synthetic source field; interpret in dataset and case context,no,184000
+data_exports.csv,export_id,string,Identifier,no,EX-77
+data_exports.csv,dataset,string,Synthetic source field; interpret in dataset and case context,no,NCB204 trial biomarker
+data_exports.csv,from_region,string,Region context,no,EU
+data_exports.csv,to_region,string,Region context,no,US
+data_exports.csv,purpose,string,Synthetic source field; interpret in dataset and case context,no,global model training
+data_exports.csv,approved,boolean_like,Approval state,no,no
+data_licenses.csv,dataset,string,Synthetic source field; interpret in dataset and case context,no,LIC-OMX-4
+data_licenses.csv,permitted_use,string,Synthetic source field; interpret in dataset and case context,no,research only
+data_licenses.csv,commercial_use,string,Synthetic source field; interpret in dataset and case context,no,no
+data_licenses.csv,model_training,string,Synthetic source field; interpret in dataset and case context,no,restricted
+data_residency.csv,data_class,string,Synthetic source field; interpret in dataset and case context,no,EU trial personal data
+data_residency.csv,approved_regions,string,Region context,no,EU
+data_residency.csv,observed_region,string,Region context,no,SG
+data_residency.csv,source,string,Originating source,no,backup_replica
+decision_rights.csv,decision,string,Synthetic source field; interpret in dataset and case context,no,batch certification
+decision_rights.csv,accountable_role,string,Role or accountable function,no,EU Qualified Person
+decision_rights.csv,ai_authority,string,Document or decision authority,no,none
+deletion_requests.csv,request_id,string,Identifier,no,DSR-17
+deletion_requests.csv,subject_id,string,Identifier,no,S-301-044
+deletion_requests.csv,scope,string,Synthetic source field; interpret in dataset and case context,no,all biomarker and AI data
+deletion_requests.csv,status,string,Source-record lifecycle or business status,no,open
+demand_forecast.csv,channel,string,Synthetic source field; interpret in dataset and case context,no,commercial_EU
+demand_forecast.csv,product,string,Product identifier or alias,no,NCB-204
+demand_forecast.csv,units_8w,integer,Reported unit; do not silently convert,no,5200
+deviations.csv,deviation_id,string,Identifier,no,DEV-201
+deviations.csv,taxonomy,string,Synthetic source field; interpret in dataset and case context,no,mixing_time
+deviations.csv,status,string,Source-record lifecycle or business status,no,closed
+deviations.csv,capa,string,Synthetic source field; interpret in dataset and case context,yes,CAPA-31
+deviations.csv,similarity_to,string,Synthetic source field; interpret in dataset and case context,yes,DEV-201
+document_catalog.csv,document_id,string,Identifier,no,DOC-ECTD-1
+document_catalog.csv,document,string,Synthetic source field; interpret in dataset and case context,no,m3-2-s-4-1-analytical.pdf
+document_catalog.csv,local_path,string,Synthetic source field; interpret in dataset and case context,yes,source_documents/CCDS_NCB204_v4.md
+document_catalog.csv,authority,string,Document or decision authority,no,Regulatory submission archive
+document_catalog.csv,effective_date,date_or_datetime,Source-record date,no,unknown
+document_catalog.csv,status,string,Source-record lifecycle or business status,no,referenced_missing
+document_catalog.csv,availability,string,Synthetic source field; interpret in dataset and case context,no,intentionally_absent
+document_catalog.csv,notes,string,Synthetic source field; interpret in dataset and case context,no,Sequence references a file not present; investigate without fabrication.
+document_lineage.csv,record,string,Synthetic source field; interpret in dataset and case context,no,COA-RG78
+document_lineage.csv,derived_from,string,Synthetic source field; interpret in dataset and case context,no,vendor_pdf_missing
+document_lineage.csv,transcribed_by,string,Synthetic source field; interpret in dataset and case context,no,AN-12
+document_lineage.csv,verified_by,string,Synthetic source field; interpret in dataset and case context,no,AN-13
+downtime_events.csv,event_id,string,Identifier,no,DT-1
+downtime_events.csv,systems,string,Synthetic source field; interpret in dataset and case context,no,"MES,QMS,historian"
+downtime_events.csv,cause,string,Synthetic source field; interpret in dataset and case context,no,ransomware containment
+downtime_events.csv,start,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-07-22T16:00:00Z
+downtime_events.csv,end,string,Synthetic source field; interpret in dataset and case context,no,2026-07-23T08:00:00Z
+duplicate_candidates.csv,case_a,string,Synthetic source field; interpret in dataset and case context,no,PV-1001
+duplicate_candidates.csv,case_b,string,Synthetic source field; interpret in dataset and case context,no,PV-1014
+duplicate_candidates.csv,similarity,number,Synthetic source field; interpret in dataset and case context,no,0.93
+duplicate_candidates.csv,reason,string,Synthetic source field; interpret in dataset and case context,no,patient/product/date overlap
+ebr_steps.csv,batch_id,string,Identifier,no,NCS310-S26033
+ebr_steps.csv,step,string,Synthetic source field; interpret in dataset and case context,no,filter_integrity
+ebr_steps.csv,performed_time,date_or_datetime,Source event time,no,2026-07-22T17:45:00+05:30
+ebr_steps.csv,entered_time,date_or_datetime,Source event time,no,2026-07-23T09:05:00+05:30
+ebr_steps.csv,entry_mode,string,Synthetic source field; interpret in dataset and case context,no,back_entry
+ectd_sequences.csv,sequence,string,Synthetic source field; interpret in dataset and case context,no,EU-0042
+ectd_sequences.csv,product,string,Product identifier or alias,no,NCB-204
+ectd_sequences.csv,index_document,string,Synthetic source field; interpret in dataset and case context,no,m3-2-s-4-1-analytical.pdf
+ectd_sequences.csv,archive_present,boolean_like,Synthetic source field; interpret in dataset and case context,no,no
+eligibility_evidence.csv,subject_id,string,Identifier,no,S-301-044
+eligibility_evidence.csv,test,string,Synthetic source field; interpret in dataset and case context,no,ALT
+eligibility_evidence.csv,value,integer,Source-reported value,no,58
+eligibility_evidence.csv,unit,string,Reported unit; do not silently convert,no,U/L
+eligibility_evidence.csv,central_uln,integer,Synthetic source field; interpret in dataset and case context,no,40
+eligibility_evidence.csv,local_uln,integer,Synthetic source field; interpret in dataset and case context,no,60
+eligibility_evidence.csv,edc_rule_uln,integer,Synthetic source field; interpret in dataset and case context,no,40
+endpoint_packets.csv,packet_id,string,Identifier,no,EP-71
+endpoint_packets.csv,subject_id,string,Identifier,no,S-301-118
+endpoint_packets.csv,endpoint,string,Synthetic source field; interpret in dataset and case context,no,MRI response
+endpoint_packets.csv,source_complete,boolean_like,Originating source,no,no
+endpoint_packets.csv,review_status,string,Source-record lifecycle or business status,no,conflict
+environmental_monitoring.csv,sample_id,string,Identifier,no,EM-501
+environmental_monitoring.csv,batch_id,string,Identifier,no,NCS310-S26033
+environmental_monitoring.csv,location,string,Synthetic source field; interpret in dataset and case context,no,FF-GradeB-07
+environmental_monitoring.csv,cfu,integer,Synthetic source field; interpret in dataset and case context,no,4
+environmental_monitoring.csv,alert_limit,integer,Synthetic source field; interpret in dataset and case context,no,3
+environmental_monitoring.csv,time,date_or_datetime,Source event time,no,2026-07-22T18:10:00+05:30
+evaluation_cohorts.csv,cohort,string,Synthetic source field; interpret in dataset and case context,no,PV_EN
+evaluation_cohorts.csv,language,string,Synthetic source field; interpret in dataset and case context,yes,English
+evaluation_cohorts.csv,n,integer,Synthetic source field; interpret in dataset and case context,no,500
+evaluation_cohorts.csv,product_type,string,Product identifier or alias,yes,sterile
+exposure_estimates.csv,product,string,Product identifier or alias,no,NCB-204
+exposure_estimates.csv,market,string,Synthetic source field; interpret in dataset and case context,no,DE
+exposure_estimates.csv,source,string,Originating source,no,sales
+exposure_estimates.csv,patients,integer,Synthetic source field; interpret in dataset and case context,no,8400
+genomic_data.csv,participant,string,Synthetic source field; interpret in dataset and case context,no,G-001
+genomic_data.csv,disease,string,Synthetic source field; interpret in dataset and case context,no,ultra_rare_X
+genomic_data.csv,variant,string,Synthetic source field; interpret in dataset and case context,no,chr7:rare
+genomic_data.csv,country,string,Country context,no,DE
+genomic_data.csv,age,integer,Synthetic source field; interpret in dataset and case context,no,17
+genomic_data.csv,postal_prefix,integer,Synthetic source field; interpret in dataset and case context,no,101
+icsr_cases.csv,case_id,string,Identifier,no,PV-1001
+icsr_cases.csv,source,string,Originating source,no,patient_program
+icsr_cases.csv,product,string,Product identifier or alias,no,NCB-204
+icsr_cases.csv,event,string,Synthetic source field; interpret in dataset and case context,no,anaphylaxis
+icsr_cases.csv,country,string,Country context,no,DE
+icsr_cases.csv,awareness_date,date_or_datetime,Source-record date,no,2026-07-20
+icsr_cases.csv,language,string,Synthetic source field; interpret in dataset and case context,no,German
+icsr_cases.csv,patient_key,string,Synthetic source field; interpret in dataset and case context,no,P-7X
+idmp_mappings.csv,local_product,string,Product identifier or alias,no,NCB204-DE
+idmp_mappings.csv,idmp_product,string,Identifier,no,NCB-204
+idmp_mappings.csv,mapping_status,string,Source-record lifecycle or business status,no,ambiguous_strength_presentation
+image_forensics.csv,study_id,string,Identifier,no,PC-88
+image_forensics.csv,panel,string,Synthetic source field; interpret in dataset and case context,no,Figure_6B
+image_forensics.csv,similarity_to,string,Synthetic source field; interpret in dataset and case context,no,Figure_4A
+image_forensics.csv,similarity_score,number,Synthetic source field; interpret in dataset and case context,no,0.97
+image_forensics.csv,metadata_note,string,Synthetic source field; interpret in dataset and case context,no,same acquisition timestamp
+imaging_reviews.csv,packet_id,string,Identifier,no,EP-71
+imaging_reviews.csv,reviewer,string,Synthetic source field; interpret in dataset and case context,no,R1
+imaging_reviews.csv,conclusion,string,Synthetic source field; interpret in dataset and case context,no,responder
+inject_evidence_map.csv,inject_id,string,Identifier,no,INJ-001
+inject_evidence_map.csv,dimension,string,Synthetic source field; interpret in dataset and case context,no,D01
+inject_evidence_map.csv,title,string,Synthetic source field; interpret in dataset and case context,no,Board compression target
+inject_evidence_map.csv,evidence_sources,string,Identifier,no,board_requests.csv; portfolio_products.csv
+inject_evidence_map.csv,participant_status,string,Source-record lifecycle or business status,no,UNASSESSED
+inspection_requests.csv,request_id,string,Identifier,no,IR-72H
+inspection_requests.csv,agency,string,Synthetic source field; interpret in dataset and case context,no,joint fictional inspection
+inspection_requests.csv,scope,string,Synthetic source field; interpret in dataset and case context,no,"trial,batch,safety,AI controls"
+inspection_requests.csv,deadline_hours,integer,Synthetic source field; interpret in dataset and case context,no,72
+instruments.csv,instrument_id,string,Identifier,no,INS-03
+instruments.csv,type,string,Synthetic source field; interpret in dataset and case context,no,plate_reader
+instruments.csv,firmware,string,Synthetic source field; interpret in dataset and case context,no,4.8.1
+instruments.csv,qualified_firmware,string,Synthetic source field; interpret in dataset and case context,no,4.7.9
+instruments.csv,qualification_status,string,Source-record lifecycle or business status,no,conditional
+interface_events.csv,interface,string,Synthetic source field; interpret in dataset and case context,no,MES-QMS
+interface_events.csv,event,string,Synthetic source field; interpret in dataset and case context,no,timeout
+interface_events.csv,retry_count,integer,Synthetic source field; interpret in dataset and case context,no,7
+interface_events.csv,idempotency_key,string,Identifier,no,missing
+interface_mappings.csv,interface,string,Synthetic source field; interpret in dataset and case context,no,CRO_LAB_TO_LIMS
+interface_mappings.csv,source_unit,string,Originating source,no,mg/L
+interface_mappings.csv,target_unit,string,Reported unit; do not silently convert,no,ug/mL
+interface_mappings.csv,conversion_rule,string,Source version,no,1:1_assumed
+interface_mappings.csv,approved,boolean_like,Approval state,no,no
+inventory.csv,product,string,Product identifier or alias,no,NCB-204
+inventory.csv,market,string,Synthetic source field; interpret in dataset and case context,no,EU
+inventory.csv,quality_status,string,Source-record lifecycle or business status,no,released
+inventory.csv,units,integer,Reported unit; do not silently convert,no,4300
+knowledge_catalog.csv,doc_id,string,Identifier,no,K-001
+knowledge_catalog.csv,file,string,Synthetic source field; interpret in dataset and case context,no,AGENT_BUDGET_AND_STOP_POLICY.md
+knowledge_catalog.csv,authority,string,Document or decision authority,no,NovaCura Global Policy
+knowledge_catalog.csv,effective,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-06-12
+knowledge_catalog.csv,status,string,Source-record lifecycle or business status,no,approved
+knowledge_catalog.csv,trust,string,Synthetic source field; interpret in dataset and case context,no,approved
+knowledge_catalog.csv,jurisdiction,string,Synthetic source field; interpret in dataset and case context,no,Global
+knowledge_catalog.csv,supersedes,string,Synthetic source field; interpret in dataset and case context,yes,BATCH_RELEASE_POLICY_OLD.md
+knowledge_catalog.csv,sha256,string,Synthetic source field; interpret in dataset and case context,no,c150c21b73eefa3551857103058c21c3eb7a809f099d12b251e6ac62548db9f7
+kpi_conflicts.csv,function,string,Synthetic source field; interpret in dataset and case context,no,Manufacturing
+kpi_conflicts.csv,kpi,string,Synthetic source field; interpret in dataset and case context,no,schedule_adherence
+kpi_conflicts.csv,target,string,Synthetic source field; interpret in dataset and case context,no,98%
+lab_results.csv,result_id,string,Identifier,no,LR-88
+lab_results.csv,batch_id,string,Identifier,no,NCB204-B24071
+lab_results.csv,test,string,Synthetic source field; interpret in dataset and case context,no,potency
+lab_results.csv,value,number,Source-reported value,no,0.92
+lab_results.csv,unit,string,Reported unit; do not silently convert,no,mg/L
+lab_results.csv,spec,string,Synthetic source field; interpret in dataset and case context,no,0.85-1.05 ug/mL
+lab_results.csv,status,string,Source-record lifecycle or business status,no,OOS_LIMS
+legal_holds.csv,hold_id,string,Identifier,no,LH-44
+legal_holds.csv,scope,string,Synthetic source field; interpret in dataset and case context,no,NCB204-301 and NCB204-B24071
+legal_holds.csv,status,string,Source-record lifecycle or business status,no,active
+listedness_sources.csv,product,string,Product identifier or alias,no,NCB-204
+listedness_sources.csv,source,string,Originating source,no,IB v12
+listedness_sources.csv,risk,string,Synthetic source field; interpret in dataset and case context,no,anaphylaxis
+listedness_sources.csv,listed,boolean_like,Synthetic source field; interpret in dataset and case context,no,yes
+market_authorisations.csv,product,string,Product identifier or alias,no,NCB-204
+market_authorisations.csv,market,string,Synthetic source field; interpret in dataset and case context,no,EU
+market_authorisations.csv,status,string,Source-record lifecycle or business status,no,authorised
+market_authorisations.csv,label_version,integer,Source version,no,6
+material_genealogy.csv,batch_id,string,Identifier,no,NCB204-B24071
+material_genealogy.csv,material_lot,string,Synthetic source field; interpret in dataset and case context,no,RESIN-R44
+material_genealogy.csv,relation,string,Synthetic source field; interpret in dataset and case context,no,consumed
+material_genealogy.csv,source,string,Originating source,no,MES
+medicinal_products.csv,product_id,string,Identifier,no,NCB-204
+medicinal_products.csv,source,string,Originating source,no,RIM
+medicinal_products.csv,strength,string,Synthetic source field; interpret in dataset and case context,no,100 mg/10 mL
+medicinal_products.csv,dose_form,string,Synthetic source field; interpret in dataset and case context,no,concentrate_for_infusion
+medicinal_products.csv,substance,string,Synthetic source field; interpret in dataset and case context,no,SUB-204
+microbiology_results.csv,sample_id,string,Identifier,no,EM-501
+microbiology_results.csv,initial_id,string,Identifier,no,Micrococcus spp
+microbiology_results.csv,corrected_id,string,Identifier,no,Bacillus cereus group
+microbiology_results.csv,correction_time,date_or_datetime,Source event time,no,2026-07-25T09:40:00+05:30
+model_artifacts.csv,model_id,string,Identifier,no,GXP-SUM-1
+model_artifacts.csv,deployed_hash,string,Integrity hash,no,sha256:222BAD
+model_artifacts.csv,registry_hash,string,Integrity hash,no,sha256:222bbb
+model_artifacts.csv,signature,string,Synthetic source field; interpret in dataset and case context,no,missing
+model_costs.csv,vendor,string,Synthetic source field; interpret in dataset and case context,no,AIVENDOR-X
+model_costs.csv,model,string,Synthetic source field; interpret in dataset and case context,no,large-1
+model_costs.csv,input_per_million,number,Synthetic source field; interpret in dataset and case context,no,8.50
+model_costs.csv,previous,number,Synthetic source field; interpret in dataset and case context,no,5.00
+model_costs.csv,output_per_million,number,Synthetic source field; interpret in dataset and case context,no,22.00
+model_endpoints.csv,endpoint,string,Synthetic source field; interpret in dataset and case context,no,primary_large
+model_endpoints.csv,region,string,Region context,no,EU-West
+model_endpoints.csv,status,string,Source-record lifecycle or business status,no,down
+model_endpoints.csv,model,string,Synthetic source field; interpret in dataset and case context,no,large-1
+model_performance.csv,model_id,string,Identifier,no,TRN-OMICS-2
+model_performance.csv,slice,string,Synthetic source field; interpret in dataset and case context,no,Group-A
+model_performance.csv,metric,string,Synthetic source field; interpret in dataset and case context,no,AUROC
+model_performance.csv,value,number,Source-reported value,no,0.86
+model_registry.csv,model_id,string,Identifier,no,TRN-OMICS-2
+model_registry.csv,intended_use,string,Synthetic source field; interpret in dataset and case context,no,portfolio ranking
+model_registry.csv,status,string,Source-record lifecycle or business status,no,research_unqualified
+model_registry.csv,hash,string,Integrity hash,no,sha256:111aaa
+model_usage.csv,workflow,string,Synthetic source field; interpret in dataset and case context,no,batch_review
+model_usage.csv,requests,integer,Synthetic source field; interpret in dataset and case context,no,1900
+model_usage.csv,input_tokens,integer,Synthetic source field; interpret in dataset and case context,no,5800000
+model_usage.csv,output_tokens,integer,Synthetic source field; interpret in dataset and case context,no,850000
+model_usage.csv,successful_tasks,integer,Synthetic source field; interpret in dataset and case context,no,1110
+network_zones.csv,zone,string,Synthetic source field; interpret in dataset and case context,no,OT_FILL_FINISH
+network_zones.csv,trust,string,Synthetic source field; interpret in dataset and case context,no,restricted
+network_zones.csv,connectivity,string,Synthetic source field; interpret in dataset and case context,no,isolated during incident
+no_ai_baselines.csv,option,string,Synthetic source field; interpret in dataset and case context,no,master_data_repair
+no_ai_baselines.csv,estimated_value_pct,integer,Source-reported value,no,38
+no_ai_baselines.csv,duration_weeks,integer,Synthetic source field; interpret in dataset and case context,no,10
+omics_cohorts.csv,cohort,string,Synthetic source field; interpret in dataset and case context,no,OM-TRAIN
+omics_cohorts.csv,ancestry_group,string,Synthetic source field; interpret in dataset and case context,no,Group-A
+omics_cohorts.csv,n,integer,Synthetic source field; interpret in dataset and case context,no,812
+omics_cohorts.csv,positive_rate,number,Synthetic source field; interpret in dataset and case context,no,0.44
+oos_investigations.csv,investigation_id,string,Identifier,no,OOS-88
+oos_investigations.csv,result_id,string,Identifier,no,LR-88
+oos_investigations.csv,lims_state,string,Synthetic source field; interpret in dataset and case context,no,OOS
+oos_investigations.csv,stats_state,string,Synthetic source field; interpret in dataset and case context,no,OOT
+oos_investigations.csv,notebook_state,string,Synthetic source field; interpret in dataset and case context,no,invalid_sample_prep
+oos_investigations.csv,final_state,string,Synthetic source field; interpret in dataset and case context,no,open
+organisations.csv,org_id,string,Identifier,no,NTG
+organisations.csv,name,string,Synthetic source field; interpret in dataset and case context,no,NovaCura Therapeutics Group
+organisations.csv,country,string,Country context,no,DE
+organisations.csv,role,string,Role or accountable function,no,sponsor/MAH
+packaging_events.csv,line,string,Synthetic source field; interpret in dataset and case context,no,PKG-3
+packaging_events.csv,event,string,Synthetic source field; interpret in dataset and case context,no,restart
+packaging_events.csv,time,date_or_datetime,Source event time,no,2026-07-28T13:22:00Z
+packaging_events.csv,aggregation_rebuild,string,Synthetic source field; interpret in dataset and case context,no,partial
+pat_models.csv,model_id,string,Identifier,no,PAT-NIR-7
+pat_models.csv,version,number,Source version,no,2.4
+pat_models.csv,approved_version,number,Source version,no,2.3
+pat_models.csv,deployed_time,date_or_datetime,Source event time,no,2026-07-09
+pat_models.csv,change_control,string,Synthetic source field; interpret in dataset and case context,no,missing
+patient_support_cases.csv,case_id,string,Identifier,no,PSP-17
+patient_support_cases.csv,product,string,Product identifier or alias,no,NCX-101
+patient_support_cases.csv,free_text,string,Synthetic source field; interpret in dataset and case context,no,"Cancer diagnosis, job loss, spouse details and bank hardship discussed"
+patient_support_cases.csv,purpose,string,Synthetic source field; interpret in dataset and case context,no,copay support
+portfolio_products.csv,product_id,string,Identifier,no,NCX-101
+portfolio_products.csv,modality,string,Synthetic source field; interpret in dataset and case context,no,small_molecule
+portfolio_products.csv,stage,string,Synthetic source field; interpret in dataset and case context,no,marketed
+portfolio_products.csv,patent_months,integer,Synthetic source field; interpret in dataset and case context,no,19
+portfolio_products.csv,primary_market,string,Synthetic source field; interpret in dataset and case context,no,US/EU
+portfolio_products.csv,risk,string,Synthetic source field; interpret in dataset and case context,no,label divergence
+preclinical_studies.csv,study_id,string,Identifier,no,PC-88
+preclinical_studies.csv,cro,string,Synthetic source field; interpret in dataset and case context,no,CRO-7
+preclinical_studies.csv,endpoint,string,Synthetic source field; interpret in dataset and case context,no,tumour_volume
+preclinical_studies.csv,status,string,Source-record lifecycle or business status,no,reported
+preclinical_studies.csv,report,string,Synthetic source field; interpret in dataset and case context,no,PC88_final.pdf
+privacy_risk.csv,dataset,string,Synthetic source field; interpret in dataset and case context,no,genomic_data.csv
+privacy_risk.csv,risk,string,Synthetic source field; interpret in dataset and case context,no,singling_out
+privacy_risk.csv,likelihood,string,Synthetic source field; interpret in dataset and case context,no,high
+privacy_risk.csv,impact,string,Synthetic source field; interpret in dataset and case context,no,high
+privileged_sessions.csv,session_id,string,Identifier,no,PS-901
+privileged_sessions.csv,user,string,User or account identifier,no,svc_admin
+privileged_sessions.csv,purpose,string,Synthetic source field; interpret in dataset and case context,no,master data repair
+privileged_sessions.csv,approved_window,string,Approval state,no,00:00-00:30Z
+privileged_sessions.csv,actual_end,string,Synthetic source field; interpret in dataset and case context,no,00:58Z
+processing_events.csv,event_id,string,Identifier,no,PE-9
+processing_events.csv,specimen_id,string,Identifier,no,SP-044-A
+processing_events.csv,purpose,string,Synthetic source field; interpret in dataset and case context,no,biomarker_model
+processing_events.csv,status,string,Source-record lifecycle or business status,no,completed
+processing_events.csv,consent_check,string,Synthetic source field; interpret in dataset and case context,no,cached_active
+product_complaints.csv,complaint_id,string,Identifier,no,PC-701
+product_complaints.csv,product,string,Product identifier or alias,no,NCS-310
+product_complaints.csv,lot,string,Synthetic source field; interpret in dataset and case context,no,NCS310-S26033
+product_complaints.csv,issue,string,Synthetic source field; interpret in dataset and case context,no,visible particles
+product_complaints.csv,adverse_event_link,string,Synthetic source field; interpret in dataset and case context,no,possible
+product_labels.csv,product,string,Product identifier or alias,no,NCB-204
+product_labels.csv,market,string,Synthetic source field; interpret in dataset and case context,no,EU
+product_labels.csv,version,integer,Source version,no,6
+product_labels.csv,risk_text,string,Synthetic source field; interpret in dataset and case context,no,severe infusion reactions including anaphylaxis
+product_labels.csv,status,string,Source-record lifecycle or business status,no,approved
+product_master_aliases.csv,alias,string,Synthetic source field; interpret in dataset and case context,no,brand_alias_B
+product_master_aliases.csv,canonical_product,string,Product identifier or alias,no,NCB-204
+production_schedule.csv,equipment,string,Synthetic source field; interpret in dataset and case context,no,BLEND-04
+production_schedule.csv,campaign,string,Synthetic source field; interpret in dataset and case context,no,C-882
+production_schedule.csv,product_sequence,string,Product identifier or alias,no,NCX-101>HP-NEW>NCX-101
+production_schedule.csv,start,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-08-04
+protocol_versions.csv,trial_id,string,Identifier,no,NCB204-301
+protocol_versions.csv,version,number,Source version,no,5.0
+protocol_versions.csv,effective_date,date_or_datetime,Source-record date,no,2026-06-01
+protocol_versions.csv,status,string,Source-record lifecycle or business status,no,global_current
+quality_events.csv,event_id,string,Identifier,no,QE-100
+quality_events.csv,type,string,Synthetic source field; interpret in dataset and case context,no,deviation
+quality_events.csv,object,string,Synthetic source field; interpret in dataset and case context,no,NCB204-B24071
+quality_events.csv,severity,string,Synthetic source field; interpret in dataset and case context,no,major
+quality_events.csv,status,string,Source-record lifecycle or business status,no,open
+randomization_events.csv,event_id,string,Identifier,no,IRT-9001
+randomization_events.csv,subject_id,string,Identifier,no,S-301-118
+randomization_events.csv,kit,string,Synthetic source field; interpret in dataset and case context,no,K-7701
+randomization_events.csv,method,string,Synthetic source field; interpret in dataset and case context,no,manual_downtime_log
+randomization_events.csv,time,date_or_datetime,Source event time,no,2026-07-24T14:12:00+02:00
+reagent_lots.csv,reagent_lot,string,Synthetic source field; interpret in dataset and case context,no,RG-77
+reagent_lots.csv,expiry,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-08-31
+reagent_lots.csv,coa_status,string,Source-record lifecycle or business status,no,verified
+recall_candidates.csv,lot,string,Synthetic source field; interpret in dataset and case context,no,NCS310-S26033
+recall_candidates.csv,shared_component,string,Synthetic source field; interpret in dataset and case context,no,VIAL-V19
+recall_candidates.csv,shared_equipment,string,Synthetic source field; interpret in dataset and case context,no,FF-02
+recall_candidates.csv,distribution,string,Synthetic source field; interpret in dataset and case context,no,not shipped
+recipes.csv,recipe_id,string,Identifier,no,NCB-UP-19
+recipes.csv,pat_model_version,number,Source version,no,2.3
+recipes.csv,effective_date,date_or_datetime,Source-record date,no,2026-06-01
+regional_rules.csv,region,string,Region context,no,EU
+regional_rules.csv,role,string,Role or accountable function,no,Qualified Person
+regional_rules.csv,rule,string,Synthetic source field; interpret in dataset and case context,no,batch certification human-only
+regulatory_changes.csv,change_id,string,Identifier,no,RC-19
+regulatory_changes.csv,change,string,Synthetic source field; interpret in dataset and case context,no,PAT model and control limit update
+regulatory_changes.csv,EU_classification,string,Synthetic source field; interpret in dataset and case context,no,Type II proposed
+regulatory_changes.csv,US_classification,string,Synthetic source field; interpret in dataset and case context,no,CBE-30 proposed
+regulatory_changes.csv,dispute,string,Synthetic source field; interpret in dataset and case context,no,open
+regulatory_commitments.csv,commitment_id,string,Identifier,no,PMC-88
+regulatory_commitments.csv,product,string,Product identifier or alias,no,NCB-204
+regulatory_commitments.csv,tracker_due,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-10-15
+regulatory_commitments.csv,authority_letter_due,date_or_datetime,Document or decision authority,no,2026-09-30
+regulatory_commitments.csv,status,string,Source-record lifecycle or business status,no,open
+release_packets.csv,batch_id,string,Identifier,no,NCB204-B24071
+release_packets.csv,packet_item,string,Synthetic source field; interpret in dataset and case context,no,CMO audit commitment 2025-14
+release_packets.csv,status,string,Source-record lifecycle or business status,no,missing
+retention_rules.csv,record_type,string,Synthetic source field; interpret in dataset and case context,no,clinical_trial_source
+retention_rules.csv,rule,string,Synthetic source field; interpret in dataset and case context,no,25 years EU minimum scenario
+retention_rules.csv,action,string,Synthetic source field; interpret in dataset and case context,no,retain
+retirement_assets.csv,asset,string,Synthetic source field; interpret in dataset and case context,no,model cards
+retirement_assets.csv,retention,string,Synthetic source field; interpret in dataset and case context,no,required
+returns.csv,return_id,string,Identifier,no,RT-1
+returns.csv,serial,string,Synthetic source field; interpret in dataset and case context,no,SN-10001
+returns.csv,print_score,number,Synthetic source field; interpret in dataset and case context,no,0.44
+returns.csv,distribution_match,boolean_like,Synthetic source field; interpret in dataset and case context,no,no
+reviewer_feedback.csv,output_id,string,Identifier,no,CO-1
+reviewer_feedback.csv,reviewer,string,Synthetic source field; interpret in dataset and case context,no,QR-11
+reviewer_feedback.csv,action,string,Synthetic source field; interpret in dataset and case context,no,accepted
+reviewer_feedback.csv,review_seconds,integer,Synthetic source field; interpret in dataset and case context,no,19
+reviewer_feedback.csv,comment,string,Synthetic source field; interpret in dataset and case context,no,looked complete
+safety_receipts.csv,case_id,string,Identifier,no,PV-1001
+safety_receipts.csv,channel,string,Synthetic source field; interpret in dataset and case context,no,vendor
+safety_receipts.csv,receipt,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-07-19T20:01:00Z
+security_events.csv,event_id,string,Identifier,no,SEC-1
+security_events.csv,type,string,Synthetic source field; interpret in dataset and case context,no,cross_affiliate_narrative_query
+security_events.csv,tokens,integer,Synthetic source field; interpret in dataset and case context,no,48900
+security_events.csv,blocked,boolean_like,Synthetic source field; interpret in dataset and case context,no,no
+sensitive_segments.csv,case_id,string,Identifier,no,PV-1020
+sensitive_segments.csv,segment,string,Synthetic source field; interpret in dataset and case context,no,pregnancy
+sensitive_segments.csv,access_group,string,Synthetic source field; interpret in dataset and case context,no,PV_PREGNANCY
+serialisation_events.csv,serial,string,Synthetic source field; interpret in dataset and case context,no,SN-10001
+serialisation_events.csv,event,string,Synthetic source field; interpret in dataset and case context,no,commission
+serialisation_events.csv,case,string,Synthetic source field; interpret in dataset and case context,no,CS-77
+serialisation_events.csv,pallet,string,Synthetic source field; interpret in dataset and case context,yes,P-88
+shipments.csv,shipment_id,string,Identifier,no,SH-901
+shipments.csv,product,string,Product identifier or alias,no,NCB-204
+shipments.csv,lots,string,Synthetic source field; interpret in dataset and case context,no,NCB204-B24062
+shipments.csv,lane,string,Synthetic source field; interpret in dataset and case context,no,IE>DE
+shipments.csv,status,string,Source-record lifecycle or business status,no,quarantine
+shipments.csv,logger,string,Synthetic source field; interpret in dataset and case context,no,LG-31
+shipments.csv,pallet,string,Synthetic source field; interpret in dataset and case context,no,P-88
+signal_metrics.csv,signal,string,Synthetic source field; interpret in dataset and case context,no,NCB204_anaphylaxis
+signal_metrics.csv,method,string,Synthetic source field; interpret in dataset and case context,no,ROR_raw
+signal_metrics.csv,value,number,Source-reported value,no,3.8
+site_approvals.csv,site_id,string,Identifier,no,IN-014
+site_approvals.csv,trial_id,string,Identifier,no,NCB204-301
+site_approvals.csv,approved_protocol,number,Approval state,no,4.1
+site_approvals.csv,ec_status,string,Source-record lifecycle or business status,no,active
+site_metrics.csv,site_id,string,Identifier,no,IN-014
+site_metrics.csv,enrolment,integer,Synthetic source field; interpret in dataset and case context,no,47
+site_metrics.csv,late_source_pct,integer,Originating source,no,31
+site_metrics.csv,digit_preference_flag,boolean_like,Synthetic source field; interpret in dataset and case context,no,true
+site_metrics.csv,credential_sharing_flag,boolean_like,Synthetic source field; interpret in dataset and case context,no,true
+social_listening.csv,post_id,string,Identifier,no,SM-77
+social_listening.csv,text,string,Synthetic source field; interpret in dataset and case context,no,Nearly died after Nova infusion
+social_listening.csv,identifiable_reporter,boolean_like,Identifier,no,no
+social_listening.csv,identifiable_patient,boolean_like,Identifier,no,no
+social_listening.csv,country,string,Country context,no,unknown
+specimens.csv,specimen_id,string,Identifier,no,SP-044-A
+specimens.csv,subject_id,string,Identifier,no,S-301-044
+specimens.csv,type,string,Synthetic source field; interpret in dataset and case context,no,plasma
+specimens.csv,status,string,Source-record lifecycle or business status,no,processed
+specimens.csv,processing_time,date_or_datetime,Source event time,no,2026-07-21T08:00:00Z
+spreadsheet_inventory.csv,file,string,Synthetic source field; interpret in dataset and case context,no,Dissolution_Acceptance_v7.xlsm
+spreadsheet_inventory.csv,owner,string,Synthetic source field; interpret in dataset and case context,no,QC-IN
+spreadsheet_inventory.csv,intended_use,string,Synthetic source field; interpret in dataset and case context,no,batch acceptance calculation
+spreadsheet_inventory.csv,version_control,string,Source version,no,email
+spreadsheet_inventory.csv,verified,boolean_like,Synthetic source field; interpret in dataset and case context,no,no
+staff_rates.csv,role,string,Role or accountable function,no,Quality reviewer
+staff_rates.csv,loaded_hourly_usd,integer,Synthetic source field; interpret in dataset and case context,no,92
+staff_rosters.csv,shift,string,Synthetic source field; interpret in dataset and case context,no,LAB-NIGHT-7
+staff_rosters.csv,staff,string,Synthetic source field; interpret in dataset and case context,no,AN-11;AN-12;AN-13
+staff_rosters.csv,account_used,string,Synthetic source field; interpret in dataset and case context,no,lab_shared_night
+stakeholders.csv,stakeholder_id,string,Identifier,no,ST-01
+stakeholders.csv,role,string,Role or accountable function,no,EU Qualified Person
+stakeholders.csv,region,string,Region context,no,EU
+stakeholders.csv,priority,string,Synthetic source field; interpret in dataset and case context,no,evidence completeness
+subjects.csv,subject_id,string,Identifier,no,S-301-044
+subjects.csv,trial_id,string,Identifier,no,NCB204-301
+subjects.csv,site_id,string,Identifier,no,IN-014
+subjects.csv,status,string,Source-record lifecycle or business status,no,screening
+substance_master.csv,substance_id,string,Identifier,no,SUB-0091
+substance_master.csv,name,string,Synthetic source field; interpret in dataset and case context,no,nexoradine mesylate
+substance_master.csv,source,string,Originating source,no,RIM
+substance_master.csv,status,string,Source-record lifecycle or business status,no,approved
+supplier_audits.csv,supplier,string,Synthetic source field; interpret in dataset and case context,no,CMO-IE
+supplier_audits.csv,audit_id,string,Identifier,no,AUD-2025-14
+supplier_audits.csv,commitment,string,Synthetic source field; interpret in dataset and case context,no,audit trail remediation
+supplier_audits.csv,due,date_or_datetime,Synthetic source field; interpret in dataset and case context,no,2026-06-30
+supplier_audits.csv,status,string,Source-record lifecycle or business status,no,vendor_claims_closed_unverified
+supplier_risks.csv,supplier,string,Synthetic source field; interpret in dataset and case context,no,EXCIP-ONE
+supplier_risks.csv,material,string,Synthetic source field; interpret in dataset and case context,no,Polysorbate-X
+supplier_risks.csv,risk,string,Synthetic source field; interpret in dataset and case context,no,contamination
+supplier_risks.csv,recovery_weeks,integer,Synthetic source field; interpret in dataset and case context,no,8
+supplier_risks.csv,alternate_qualified,boolean_like,Synthetic source field; interpret in dataset and case context,no,no
+support_tickets.csv,ticket_id,string,Identifier,no,SUP-41
+support_tickets.csv,system,string,Synthetic source field; interpret in dataset and case context,no,IRT
+support_tickets.csv,text,string,Synthetic source field; interpret in dataset and case context,no,Kit pattern suggests active arm; screenshot attached
+support_tickets.csv,visibility,string,Synthetic source field; interpret in dataset and case context,no,site_and_vendor
+system_inventory.csv,system,string,Synthetic source field; interpret in dataset and case context,no,LIMS-4
+system_inventory.csv,owner,string,Synthetic source field; interpret in dataset and case context,no,QC
+system_inventory.csv,classification,string,Synthetic source field; interpret in dataset and case context,no,GxP critical
+system_inventory.csv,status,string,Source-record lifecycle or business status,no,validated
+target_evidence.csv,target,string,Synthetic source field; interpret in dataset and case context,no,TKR9
+target_evidence.csv,source,string,Originating source,no,internal_CRISPR
+target_evidence.csv,direction,string,Synthetic source field; interpret in dataset and case context,no,supports
+target_evidence.csv,confidence,string,Identifier,no,high
+temperature_loggers.csv,logger,string,Synthetic source field; interpret in dataset and case context,no,LG-31
+temperature_loggers.csv,timestamp,date_or_datetime,Source event time,no,2026-07-29 02:10
+temperature_loggers.csv,timezone,string,Source event time,no,local_unknown
+temperature_loggers.csv,temp_c,number,Synthetic source field; interpret in dataset and case context,no,10.8
+temperature_loggers.csv,pallet,string,Synthetic source field; interpret in dataset and case context,no,P-89
+terminology_versions.csv,terminology,string,Synthetic source field; interpret in dataset and case context,no,MedDRA
+terminology_versions.csv,version,number,Source version,no,27.1
+terminology_versions.csv,status,string,Source-record lifecycle or business status,no,legacy_cases
+timezone_rules.csv,site_id,string,Identifier,no,DE-008
+timezone_rules.csv,timezone,string,Source event time,no,Europe/Berlin
+timezone_rules.csv,dst_transition,string,Synthetic source field; interpret in dataset and case context,no,2026-03-29
+tool_catalog.csv,tool_id,string,Identifier,no,batch_status_read
+tool_catalog.csv,permissions,string,Synthetic source field; interpret in dataset and case context,no,read batch status
+tool_catalog.csv,approved,boolean_like,Approval state,no,yes
+tool_catalog.csv,manifest,string,Synthetic source field; interpret in dataset and case context,yes,tool_manifest_poisoned.json
+trade_documents.csv,shipment_id,string,Identifier,no,SH-902
+trade_documents.csv,document,string,Synthetic source field; interpret in dataset and case context,no,invoice
+trade_documents.csv,description,string,Synthetic source field; interpret in dataset and case context,no,sterile research samples
+usability_findings.csv,finding,string,Synthetic source field; interpret in dataset and case context,no,keyboard navigation
+usability_findings.csv,severity,string,Synthetic source field; interpret in dataset and case context,no,high
+usability_findings.csv,status,string,Source-record lifecycle or business status,no,fail
+users_entitlements.csv,user,string,User or account identifier,no,contractor_77
+users_entitlements.csv,role,string,Role or accountable function,no,supplier_quality_viewer
+users_entitlements.csv,iam_state,string,Synthetic source field; interpret in dataset and case context,no,revoked
+users_entitlements.csv,ai_gateway_state,string,Synthetic source field; interpret in dataset and case context,no,active_cached
+validation_inventory.csv,system,string,Synthetic source field; interpret in dataset and case context,no,AI-EVIDENCE
+validation_inventory.csv,source,string,Originating source,no,Quality inventory
+validation_inventory.csv,state,string,Synthetic source field; interpret in dataset and case context,no,conditionally_released
+validation_tests.csv,test_id,string,Identifier,no,VT-1
+validation_tests.csv,system,string,Synthetic source field; interpret in dataset and case context,no,AI-EVIDENCE
+validation_tests.csv,requirement,string,Synthetic source field; interpret in dataset and case context,no,citation provenance
+validation_tests.csv,result,string,Synthetic source field; interpret in dataset and case context,no,fail_on_superseded_doc
+vendor_contracts.csv,vendor,string,Synthetic source field; interpret in dataset and case context,no,CMO-IE
+vendor_contracts.csv,service,string,Synthetic source field; interpret in dataset and case context,no,fill_finish
+vendor_contracts.csv,exit_days,integer,Synthetic source field; interpret in dataset and case context,no,180
+vendor_contracts.csv,data_export,string,Synthetic source field; interpret in dataset and case context,no,PDF/CSV partial
+vendor_dependencies.csv,capability,string,Synthetic source field; interpret in dataset and case context,no,model hosting
+vendor_dependencies.csv,vendor,string,Synthetic source field; interpret in dataset and case context,no,AIVENDOR-X
+vendor_exit_assets.csv,asset,string,Synthetic source field; interpret in dataset and case context,no,prompt_export
+vendor_exit_assets.csv,status,string,Source-record lifecycle or business status,no,available
+vendor_releases.csv,vendor,string,Synthetic source field; interpret in dataset and case context,no,MESCo
+vendor_releases.csv,version,string,Source version,no,11.2.4
+vendor_releases.csv,security_fix,string,Synthetic source field; interpret in dataset and case context,no,critical
+vendor_releases.csv,validation_pack,string,Identifier,no,partial
+warehouse_movements.csv,movement_id,string,Identifier,no,WM-90
+warehouse_movements.csv,material_lot,string,Synthetic source field; interpret in dataset and case context,no,SUA-88
+warehouse_movements.csv,batch_id,string,Identifier,no,NCB204-B24071
+warehouse_movements.csv,quantity,integer,Synthetic source field; interpret in dataset and case context,no,1
+warehouse_movements.csv,unit,string,Reported unit; do not silently convert,no,assembly
+warehouse_movements.csv,status,string,Source-record lifecycle or business status,no,issued
+wearable_readings.csv,subject_id,string,Identifier,no,S-301-118
+wearable_readings.csv,device_id,string,Identifier,no,WR-11
+wearable_readings.csv,timestamp,date_or_datetime,Source event time,no,2026-03-29 02:15
+wearable_readings.csv,timezone,string,Source event time,no,local_unknown
+wearable_readings.csv,heart_rate,integer,Synthetic source field; interpret in dataset and case context,no,118

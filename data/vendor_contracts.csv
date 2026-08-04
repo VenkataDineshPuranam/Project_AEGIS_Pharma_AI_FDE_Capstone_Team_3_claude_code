@@ -1,0 +1,3 @@
+vendor,service,exit_days,data_export
+CMO-IE,fill_finish,180,PDF/CSV partial
+AIVENDOR-X,model/vector/eval/observability,120,prompts only

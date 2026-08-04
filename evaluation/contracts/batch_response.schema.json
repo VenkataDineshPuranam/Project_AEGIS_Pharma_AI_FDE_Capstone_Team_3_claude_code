@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "batch_response.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "workflow",
+    "as_of",
+    "authorization",
+    "evidence",
+    "contradictions",
+    "gaps",
+    "abstentions",
+    "human_review",
+    "execution_status",
+    "audit",
+    "batch_id",
+    "readiness_state",
+    "applicable_documents"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workflow": {
+      "const": "batch_evidence"
+    },
+    "as_of": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "user",
+        "purpose",
+        "checked_at",
+        "decision"
+      ],
+      "properties": {
+        "user": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "checked_at": {
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "allow",
+            "deny"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "evidence_item.schema.json"
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "abstentions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "human_review": {
+      "type": "object"
+    },
+    "execution_status": {
+      "const": "not_executed"
+    },
+    "audit": {
+      "type": "object"
+    },
+    "batch_id": {
+      "type": "string"
+    },
+    "readiness_state": {
+      "enum": [
+        "insufficient_evidence",
+        "conflicted_evidence",
+        "ready_for_authorized_review"
+      ]
+    },
+    "applicable_documents": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

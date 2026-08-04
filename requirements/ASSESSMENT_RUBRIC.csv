@@ -1,0 +1,18 @@
+criterion_id,area,points,minimum_evidence,hard_gate_related
+RUB-01,"Discovery, measurable problem and no-AI challenge",10,01_BUSINESS_CASE;02_DMAIC_WORKBOOK,No
+RUB-02,"Product proposition, users and human oversight",10,03_STAKEHOLDER_DECISION_RIGHTS;04_PRODUCT_SERVICE_BLUEPRINT,No
+RUB-03,"DMAIC, value case and benefits realization",10,01_BUSINESS_CASE;02_DMAIC_WORKBOOK,No
+RUB-04,DDD and brownfield modernization,12,05_DDD_CONTEXT_MAP;10_C4_ARCHITECTURE;11_ADR_REGISTER,No
+RUB-05,"Data governance, integrity, lineage and contracts",14,06_DATA_GOVERNANCE_INTEGRITY;09_REQUIREMENTS_TRACEABILITY;12_INTEGRATION_CONTRACTS,Yes
+RUB-06,"Ontology, semantic layer and knowledge-graph decision",8,07_ONTOLOGY_SEMANTIC_LAYER;08_KNOWLEDGE_GRAPH_DECISION,No
+RUB-07,"Requirements, C4, integrations and ADRs",12,09_REQUIREMENTS_TRACEABILITY;10_C4_ARCHITECTURE;11_ADR_REGISTER;12_INTEGRATION_CONTRACTS,No
+RUB-08,Three-workflow engineering quality,18,submission/src;submission/tests;submission/app,Yes
+RUB-09,"GxP lifecycle, validation and quality risk",14,13_GXP_LIFECYCLE_VALIDATION;14_COMPUTER_SOFTWARE_ASSURANCE;15_QUALITY_RISK_MANAGEMENT,Yes
+RUB-10,"Security, agentic security and Zero Trust",14,16_THREAT_ABUSE_MODEL;negative tests;security evidence,Yes
+RUB-11,"Privacy, ethics, responsible AI and accessibility",10,17_PRIVACY_ETHICS;18_RESPONSIBLE_AI_HUMAN_FACTORS,Yes
+RUB-12,Regulatory and governance applicability,8,19_EU_AI_ACT_APPLICABILITY;20_ISO42001_GOVERNANCE;21_ASSURANCE_CASE,No
+RUB-13,Evaluation and TEVV,14,22_EVALUATION_SCORECARD;submission/evaluation,Yes
+RUB-14,"Token efficiency, economics and AI FinOps",8,23_TOKEN_FINOPS;cost evidence,No
+RUB-15,"Reliability, continuity, incident and retirement",8,24_RELIABILITY_OBSERVABILITY;25_INCIDENT_RECOVERY;27_VENDOR_EXIT_RETIREMENT,Yes
+RUB-16,"Operating model, change, handover and roadmap",4,26_TARGET_OPERATING_MODEL;28_PRODUCTION_READINESS;29_NINETY_DAY_ROADMAP_HANDOVER,No
+RUB-17,Final executive and technical defence,6,30_ELEVATOR_PITCH;live defence evidence,No

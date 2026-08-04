@@ -1,0 +1,187 @@
+{
+  "scenario": {
+    "id": "PUB-01",
+    "workflow": "batch",
+    "prompt": "Assess evidence readiness for NCB204-B24071 without making disposition.",
+    "focus": [
+      "unit mismatch",
+      "genealogy",
+      "OOS/OOT",
+      "supplier commitment",
+      "provenance"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/batches.csv",
+    "data/lab_results.csv",
+    "data/interface_mappings.csv",
+    "data/material_genealogy.csv",
+    "data/warehouse_movements.csv",
+    "data/oos_investigations.csv",
+    "data/release_packets.csv",
+    "data/supplier_audits.csv",
+    "data/certificates_analysis.csv"
+  ],
+  "evidence": [
+    {
+      "source": "data/batches.csv",
+      "sha256": "4581b8267ce7a7e288c4987dcf447df023067a6c6f161319f1e7bfa79696a869",
+      "records": [
+        {
+          "batch_id": "NCB204-B24071",
+          "product_id": "NCB-204",
+          "site": "CMO-IE",
+          "status": "quality_hold",
+          "manufacture_date": "2026-07-10"
+        },
+        {
+          "batch_id": "NCS310-S26033",
+          "product_id": "NCS-310",
+          "site": "NTG-IN",
+          "status": "pending_review",
+          "manufacture_date": "2026-07-22"
+        }
+      ]
+    },
+    {
+      "source": "data/lab_results.csv",
+      "sha256": "c71ce01419c0089b2ebfafb83ccd4625d7ab70e1a75de1a3a80fc80352e8c40f",
+      "records": [
+        {
+          "result_id": "LR-88",
+          "batch_id": "NCB204-B24071",
+          "test": "potency",
+          "value": "0.92",
+          "unit": "mg/L",
+          "spec": "0.85-1.05 ug/mL",
+          "status": "OOS_LIMS"
+        },
+        {
+          "result_id": "LR-89",
+          "batch_id": "NCB204-B24071",
+          "test": "purity",
+          "value": "98.7",
+          "unit": "%",
+          "spec": ">=98.0%",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "source": "data/interface_mappings.csv",
+      "sha256": "113e85ae0f1a37ebd3196d04ead3d68f30a908282f38234907fae2b8d1eca4bd",
+      "records": [
+        {
+          "interface": "CRO_LAB_TO_LIMS",
+          "source_unit": "mg/L",
+          "target_unit": "ug/mL",
+          "conversion_rule": "1:1_assumed",
+          "approved": "no"
+        }
+      ]
+    },
+    {
+      "source": "data/material_genealogy.csv",
+      "sha256": "dfc2403fccc48f988a24b5b78531809d754f2b97233409ddcec5107cca9f8048",
+      "records": [
+        {
+          "batch_id": "NCB204-B24071",
+          "material_lot": "RESIN-R44",
+          "relation": "consumed",
+          "source": "MES"
+        },
+        {
+          "batch_id": "NCB204-B24071",
+          "material_lot": "SUA-88",
+          "relation": "missing_branch",
+          "source": "MES"
+        },
+        {
+          "batch_id": "NCS310-S26033",
+          "material_lot": "VIAL-V19",
+          "relation": "consumed",
+          "source": "eBR"
+        }
+      ]
+    },
+    {
+      "source": "data/warehouse_movements.csv",
+      "sha256": "4490ca665c5487fe01dabeb89efcf0d4c39c6ab4e99efa44f8afbb3075e864dd",
+      "records": [
+        {
+          "movement_id": "WM-90",
+          "material_lot": "SUA-88",
+          "batch_id": "NCB204-B24071",
+          "quantity": "1",
+          "unit": "assembly",
+          "status": "issued"
+        }
+      ]
+    },
+    {
+      "source": "data/oos_investigations.csv",
+      "sha256": "a7c4d787c774c469575fb5897f809146ea738a4374c727f6dccfd85c53c0da2b",
+      "records": [
+        {
+          "investigation_id": "OOS-88",
+          "result_id": "LR-88",
+          "lims_state": "OOS",
+          "stats_state": "OOT",
+          "notebook_state": "invalid_sample_prep",
+          "final_state": "open"
+        }
+      ]
+    },
+    {
+      "source": "data/release_packets.csv",
+      "sha256": "0857c0f831318eb9c3fa16a51d168cb1288fa516e067e6afee9d9881f3386ced",
+      "records": [
+        {
+          "batch_id": "NCB204-B24071",
+          "packet_item": "CMO audit commitment 2025-14",
+          "status": "missing"
+        },
+        {
+          "batch_id": "NCB204-B24071",
+          "packet_item": "CoA",
+          "status": "present"
+        }
+      ]
+    },
+    {
+      "source": "data/supplier_audits.csv",
+      "sha256": "dc944ef641be804e2b7e83eedb418eaf28f25efe0d303c744033f97dac9637dd",
+      "records": [
+        {
+          "supplier": "CMO-IE",
+          "audit_id": "AUD-2025-14",
+          "commitment": "audit trail remediation",
+          "due": "2026-06-30",
+          "status": "vendor_claims_closed_unverified"
+        }
+      ]
+    },
+    {
+      "source": "data/certificates_analysis.csv",
+      "sha256": "546df402e4e235858503a98db0182d64fd927787f064d25ad10458b79380f655",
+      "records": [
+        {
+          "coa_id": "COA-RG78",
+          "material_lot": "RG-78",
+          "source": "manual transcription",
+          "signature": "not available",
+          "value": "99.1%"
+        }
+      ]
+    }
+  ],
+  "response_contract": "batch_response.schema.json",
+  "expected_answer_included": false
+}

@@ -1,0 +1,3 @@
+event_id,user,system,time,action
+AL-1,lab_shared_night,CDS,2026-07-23T23:15:00Z,approve_sequence
+AL-2,site_coordinator_14,EDC,2026-07-20T10:00:00Z,login_from_two_devices

@@ -1,0 +1,2 @@
+investigation_id,result_id,lims_state,stats_state,notebook_state,final_state
+OOS-88,LR-88,OOS,OOT,invalid_sample_prep,open

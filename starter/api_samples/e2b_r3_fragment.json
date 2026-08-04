@@ -1,0 +1,14 @@
+{
+  "safetyreportid": "PV-1001",
+  "receivedate": "20260719",
+  "receiptdateformat": "102",
+  "patient": {
+    "patientinitial": "PX",
+    "reaction": [
+      {
+        "reactionmeddraversionpt": "27.1",
+        "reactionmeddrapt": "Anaphylactic reaction"
+      }
+    ]
+  }
+}

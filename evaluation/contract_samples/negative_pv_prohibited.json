@@ -1,0 +1,49 @@
+{
+  "request_id": "REQ-1",
+  "as_of": "2026-08-01T08:00:00Z",
+  "authorization": {
+    "user": "tester",
+    "purpose": "training",
+    "checked_at": "2026-08-01T08:00:00Z",
+    "decision": "allow",
+    "reason": "synthetic"
+  },
+  "evidence": [
+    {
+      "source": "data/example.csv",
+      "record_id": "R-1",
+      "authority": "synthetic source",
+      "effective_at": null,
+      "retrieved_at": "2026-08-01T08:00:00Z",
+      "facts": {},
+      "integrity": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "source_preserved": true
+      }
+    }
+  ],
+  "contradictions": [],
+  "gaps": [],
+  "abstentions": [],
+  "human_review": {
+    "required": true,
+    "role": "authorized reviewer"
+  },
+  "execution_status": "not_executed",
+  "audit": {
+    "event_id": "AUD-1"
+  },
+  "workflow": "pv_intake",
+  "case_ids": [
+    "PV-1001"
+  ],
+  "source_facts": [],
+  "duplicate_candidates": [],
+  "clock_evidence": [],
+  "terminology": [],
+  "listedness_context": [],
+  "required_reviews": [
+    "safety physician"
+  ],
+  "final_reportability": "reportable"
+}

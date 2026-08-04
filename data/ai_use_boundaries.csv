@@ -1,0 +1,4 @@
+use_case,allowed,prohibited
+batch evidence,"reconcile, cite, flag, abstain",release/reject/reprocess/recall
+PV intake,"extract, normalize, cluster, cite",final causality/seriousness/reportability
+supply planning,generate options,reserve/allocate/ship

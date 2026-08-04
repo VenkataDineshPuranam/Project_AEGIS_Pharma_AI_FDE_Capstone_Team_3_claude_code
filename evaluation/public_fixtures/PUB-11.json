@@ -1,0 +1,113 @@
+{
+  "scenario": {
+    "id": "PUB-11",
+    "workflow": "privacy",
+    "prompt": "Handle deletion request DSR-17 with legal hold and trial-integrity obligations.",
+    "focus": [
+      "restriction not simplistic deletion",
+      "purpose mapping",
+      "document decision"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/deletion_requests.csv",
+    "data/legal_holds.csv",
+    "data/retention_rules.csv",
+    "data/consents.csv",
+    "data/processing_events.csv",
+    "knowledge/PRIVACY_AND_PSEUDONYMISATION.md"
+  ],
+  "evidence": [
+    {
+      "source": "data/deletion_requests.csv",
+      "sha256": "04abde7e38d1a3c308226ddcceb1576dbbb602a5194d7c509b5b23811e13f32e",
+      "records": [
+        {
+          "request_id": "DSR-17",
+          "subject_id": "S-301-044",
+          "scope": "all biomarker and AI data",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "source": "data/legal_holds.csv",
+      "sha256": "67625b6a1779d30c062f140e09c24cd66be17916c7137ae56ecc8881ffa5ed68",
+      "records": [
+        {
+          "hold_id": "LH-44",
+          "scope": "NCB204-301 and NCB204-B24071",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "source": "data/retention_rules.csv",
+      "sha256": "1bbfa0f2c9c75ad4c976dab656d8973448afd95179a41363c1eb851847534fcd",
+      "records": [
+        {
+          "record_type": "clinical_trial_source",
+          "rule": "25 years EU minimum scenario",
+          "action": "retain"
+        },
+        {
+          "record_type": "ICSR",
+          "rule": "PV lifecycle retention",
+          "action": "retain"
+        },
+        {
+          "record_type": "AI prompt logs",
+          "rule": "privacy minimisation",
+          "action": "delete after 90 days unless evidence hold"
+        }
+      ]
+    },
+    {
+      "source": "data/consents.csv",
+      "sha256": "4da9410b65a03595bfec6dc0825dcc518457046a4d882627348eeea244482846",
+      "records": [
+        {
+          "consent_id": "C-044",
+          "subject_id": "S-301-044",
+          "purpose": "trial_and_biomarker",
+          "status": "withdrawn_biomarker",
+          "effective_time": "2026-07-20T10:15:00+05:30"
+        },
+        {
+          "consent_id": "C-118",
+          "subject_id": "S-301-118",
+          "purpose": "trial",
+          "status": "active",
+          "effective_time": "2026-01-11T09:00:00+01:00"
+        }
+      ]
+    },
+    {
+      "source": "data/processing_events.csv",
+      "sha256": "e4ae3b2ee3792658ab70b3fb1bc1d582a2fe767d97575999c1e97fd6fa41ca93",
+      "records": [
+        {
+          "event_id": "PE-9",
+          "specimen_id": "SP-044-A",
+          "purpose": "biomarker_model",
+          "status": "completed",
+          "consent_check": "cached_active"
+        }
+      ]
+    },
+    {
+      "source": "knowledge/PRIVACY_AND_PSEUDONYMISATION.md",
+      "sha256": "811ec1d2d28be556c7ab0996deab2548a1ddfda2821b898fe435d84c5c7c7aa9",
+      "text": "# Privacy And Pseudonymisation\n\n## Document control\n\n- Document ID: K-020\n- Status: approved\n- Effective date: 2026-03-20\n- Synthetic authority: NovaCura Global Policy\n- Training classification: scenario evidence; not a real controlled document\n\n## Purpose and scope\n\nDefines minimization, re-identification assessment and controlled linkage.\n\n## Mandatory controls\n\n- Minimise data and separate direct identifiers from working data.\n- Assess linkage and re-identification risk.\n- Control access, purpose, retention and transfer.\n\n## Evidence expected\n\n- Source identity, version, effective date, responsible owner and retrieval time.\n- Input records, transformations, conflicts, gaps, reviewer actions and resulting audit events.\n- Any exception, escalation, override or residual risk with accountable approval.\n\n## Prohibited use\n\n- Do not treat this document as authority outside its status, jurisdiction, intended scope or effective period.\n- Do not infer a regulated decision, execute a side effect, or hide conflicting evidence.\n\n## Retrieval and conflict handling\n\nThe consumer must expose status, authority and effective date; detect supersession or untrusted content; cite the exact source; and abstain or escalate when applicability cannot be established.\n\nThis document is part of a fictional training scenario. Participants must determine authority, applicability, supersession and permitted use.\n"
+    }
+  ],
+  "response_contract": "advisory_nonexecuting",
+  "expected_answer_included": false
+}

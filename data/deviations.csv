@@ -1,0 +1,3 @@
+deviation_id,taxonomy,status,capa,similarity_to
+DEV-201,mixing_time,closed,CAPA-31,
+DEV-244,process_duration,open,,DEV-201

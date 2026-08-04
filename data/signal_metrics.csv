@@ -1,0 +1,4 @@
+signal,method,value
+NCB204_anaphylaxis,ROR_raw,3.8
+NCB204_anaphylaxis,ROR_deduplicated,2.1
+NCB204_anaphylaxis,EBGM_alt_exposure,1.4

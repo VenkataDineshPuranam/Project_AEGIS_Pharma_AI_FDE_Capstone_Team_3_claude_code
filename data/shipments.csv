@@ -1,0 +1,3 @@
+shipment_id,product,lots,lane,status,logger,pallet
+SH-901,NCB-204,NCB204-B24062,IE>DE,quarantine,LG-31,P-88
+SH-902,NCS-310,NCS310-S26031,IN>AE,customs_hold,LG-42,P-92

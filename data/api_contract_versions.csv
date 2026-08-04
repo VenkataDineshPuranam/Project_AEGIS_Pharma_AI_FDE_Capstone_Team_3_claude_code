@@ -1,0 +1,4 @@
+api,version,unit_field,status_field,date_semantics
+LIMS result,v1,unit,status,
+LIMS result,v2,ucum_code,lifecycleState,
+Safety ICSR,E2B_R3,,,precision variable

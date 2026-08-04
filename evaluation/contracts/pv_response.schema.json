@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pv_response.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "workflow",
+    "as_of",
+    "authorization",
+    "evidence",
+    "contradictions",
+    "gaps",
+    "abstentions",
+    "human_review",
+    "execution_status",
+    "audit",
+    "case_ids",
+    "source_facts",
+    "duplicate_candidates",
+    "clock_evidence",
+    "terminology",
+    "listedness_context",
+    "required_reviews"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workflow": {
+      "const": "pv_intake"
+    },
+    "as_of": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "user",
+        "purpose",
+        "checked_at",
+        "decision"
+      ],
+      "properties": {
+        "user": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "checked_at": {
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "allow",
+            "deny"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "evidence_item.schema.json"
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "abstentions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "human_review": {
+      "type": "object"
+    },
+    "execution_status": {
+      "const": "not_executed"
+    },
+    "audit": {
+      "type": "object"
+    },
+    "case_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_facts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "duplicate_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "clock_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "terminology": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "listedness_context": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "required_reviews": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

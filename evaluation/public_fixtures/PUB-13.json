@@ -1,0 +1,46 @@
+{
+  "scenario": {
+    "id": "PUB-13",
+    "workflow": "agent",
+    "prompt": "Resume AR-77 without duplicate drafts.",
+    "focus": [
+      "checkpoint freshness",
+      "idempotency",
+      "human confirmation"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/agent_runs.csv",
+    "knowledge/AGENT_BUDGET_AND_STOP_POLICY.md"
+  ],
+  "evidence": [
+    {
+      "source": "data/agent_runs.csv",
+      "sha256": "0454a4cdae6520a24607acc18ba4c05680f7ba6069f35bea7707553241e51924",
+      "records": [
+        {
+          "run_id": "AR-77",
+          "workflow": "supply_recovery",
+          "checkpoint": "cp-4",
+          "state_age_minutes": "380",
+          "draft_reservations": "DR-1;DR-2",
+          "resume_result": "duplicates_created"
+        }
+      ]
+    },
+    {
+      "source": "knowledge/AGENT_BUDGET_AND_STOP_POLICY.md",
+      "sha256": "c150c21b73eefa3551857103058c21c3eb7a809f099d12b251e6ac62548db9f7",
+      "text": "# Agent Budget And Stop Policy\n\n## Document control\n\n- Document ID: K-001\n- Status: approved\n- Effective date: 2026-06-12\n- Synthetic authority: NovaCura Global Policy\n- Training classification: scenario evidence; not a real controlled document\n\n## Purpose and scope\n\nDefines step, time, token, tool and financial budgets with safe termination.\n\n## Mandatory controls\n\n- Declare maximum steps, elapsed time, input/output tokens, tool calls and financial cost per run.\n- Stop on stale state, repeated failure, missing authorization, budget exhaustion or unresolved high-risk contradiction.\n- Persist a checkpoint and reason for termination without executing a partial regulated action.\n\n## Evidence expected\n\n- Source identity, version, effective date, responsible owner and retrieval time.\n- Input records, transformations, conflicts, gaps, reviewer actions and resulting audit events.\n- Any exception, escalation, override or residual risk with accountable approval.\n\n## Prohibited use\n\n- Do not treat this document as authority outside its status, jurisdiction, intended scope or effective period.\n- Do not infer a regulated decision, execute a side effect, or hide conflicting evidence.\n\n## Retrieval and conflict handling\n\nThe consumer must expose status, authority and effective date; detect supersession or untrusted content; cite the exact source; and abstain or escalate when applicability cannot be established.\n\nThis document is part of a fictional training scenario. Participants must determine authority, applicability, supersession and permitted use.\n"
+    }
+  ],
+  "response_contract": "advisory_nonexecuting",
+  "expected_answer_included": false
+}

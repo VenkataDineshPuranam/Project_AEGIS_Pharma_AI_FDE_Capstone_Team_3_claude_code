@@ -1,0 +1,3 @@
+assay_id,compound_code,result,unit,reagent_lot,instrument,date
+AS-100,BX-17,84.2,% potency,RG-77,INS-03,2026-07-18
+AS-101,BX-17,91.8,% potency,RG-78,INS-03,2026-07-28

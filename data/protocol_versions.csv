@@ -1,0 +1,4 @@
+trial_id,version,effective_date,status
+NCB204-301,5.0,2026-06-01,global_current
+NCB204-301,4.1,2026-02-01,current_IN_pending_amendment
+NCB204-301,3.2,2025-10-01,obsolete_but_site_cached

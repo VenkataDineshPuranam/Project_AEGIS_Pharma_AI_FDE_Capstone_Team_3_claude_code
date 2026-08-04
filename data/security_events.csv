@@ -1,0 +1,3 @@
+event_id,type,tokens,blocked
+SEC-1,cross_affiliate_narrative_query,48900,no
+SEC-2,oversized_document_loop,980000,no

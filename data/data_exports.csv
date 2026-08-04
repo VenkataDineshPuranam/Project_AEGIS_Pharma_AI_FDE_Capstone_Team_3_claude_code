@@ -1,0 +1,2 @@
+export_id,dataset,from_region,to_region,purpose,approved
+EX-77,NCB204 trial biomarker,EU,US,global model training,no

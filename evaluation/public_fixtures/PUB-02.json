@@ -1,0 +1,133 @@
+{
+  "scenario": {
+    "id": "PUB-02",
+    "workflow": "batch",
+    "prompt": "Assess NCS310-S26033 under environmental and complaint evidence.",
+    "focus": [
+      "sterility excursion",
+      "corrected organism",
+      "back entry",
+      "shared components"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/batches.csv",
+    "data/environmental_monitoring.csv",
+    "data/microbiology_results.csv",
+    "data/product_complaints.csv",
+    "data/recall_candidates.csv",
+    "data/material_genealogy.csv"
+  ],
+  "evidence": [
+    {
+      "source": "data/batches.csv",
+      "sha256": "4581b8267ce7a7e288c4987dcf447df023067a6c6f161319f1e7bfa79696a869",
+      "records": [
+        {
+          "batch_id": "NCB204-B24071",
+          "product_id": "NCB-204",
+          "site": "CMO-IE",
+          "status": "quality_hold",
+          "manufacture_date": "2026-07-10"
+        },
+        {
+          "batch_id": "NCS310-S26033",
+          "product_id": "NCS-310",
+          "site": "NTG-IN",
+          "status": "pending_review",
+          "manufacture_date": "2026-07-22"
+        }
+      ]
+    },
+    {
+      "source": "data/environmental_monitoring.csv",
+      "sha256": "d65d2d36be37b4e9458f390bb568fa4b76e910430a580c19b95fc52054f3e01a",
+      "records": [
+        {
+          "sample_id": "EM-501",
+          "batch_id": "NCS310-S26033",
+          "location": "FF-GradeB-07",
+          "cfu": "4",
+          "alert_limit": "3",
+          "time": "2026-07-22T18:10:00+05:30"
+        }
+      ]
+    },
+    {
+      "source": "data/microbiology_results.csv",
+      "sha256": "8c1614f4642110a530ea68baff7454d043ee5d59a1ad0b7b2dbf5448ad6b44b7",
+      "records": [
+        {
+          "sample_id": "EM-501",
+          "initial_id": "Micrococcus spp",
+          "corrected_id": "Bacillus cereus group",
+          "correction_time": "2026-07-25T09:40:00+05:30"
+        }
+      ]
+    },
+    {
+      "source": "data/product_complaints.csv",
+      "sha256": "0c9d6abe0873a714bd2e92899d438d03124fee7005060d8833176a3e422d35fc",
+      "records": [
+        {
+          "complaint_id": "PC-701",
+          "product": "NCS-310",
+          "lot": "NCS310-S26033",
+          "issue": "visible particles",
+          "adverse_event_link": "possible"
+        }
+      ]
+    },
+    {
+      "source": "data/recall_candidates.csv",
+      "sha256": "e5efd65787e8ac72de42eb37d49d100350ed65b268c7ddbb469121f0b65c9163",
+      "records": [
+        {
+          "lot": "NCS310-S26033",
+          "shared_component": "VIAL-V19",
+          "shared_equipment": "FF-02",
+          "distribution": "not shipped"
+        },
+        {
+          "lot": "NCS310-S26031",
+          "shared_component": "VIAL-V19",
+          "shared_equipment": "FF-02",
+          "distribution": "AE hospitals"
+        }
+      ]
+    },
+    {
+      "source": "data/material_genealogy.csv",
+      "sha256": "dfc2403fccc48f988a24b5b78531809d754f2b97233409ddcec5107cca9f8048",
+      "records": [
+        {
+          "batch_id": "NCB204-B24071",
+          "material_lot": "RESIN-R44",
+          "relation": "consumed",
+          "source": "MES"
+        },
+        {
+          "batch_id": "NCB204-B24071",
+          "material_lot": "SUA-88",
+          "relation": "missing_branch",
+          "source": "MES"
+        },
+        {
+          "batch_id": "NCS310-S26033",
+          "material_lot": "VIAL-V19",
+          "relation": "consumed",
+          "source": "eBR"
+        }
+      ]
+    }
+  ],
+  "response_contract": "batch_response.schema.json",
+  "expected_answer_included": false
+}

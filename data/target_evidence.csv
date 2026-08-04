@@ -1,0 +1,3 @@
+target,source,direction,confidence
+TKR9,internal_CRISPR,supports,high
+TKR9,licensed_dataset,does_not_support,medium

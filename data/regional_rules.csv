@@ -1,0 +1,4 @@
+region,role,rule
+EU,Qualified Person,batch certification human-only
+US,Quality Unit,disposition human-only
+IN,Authorized Quality,release human-only

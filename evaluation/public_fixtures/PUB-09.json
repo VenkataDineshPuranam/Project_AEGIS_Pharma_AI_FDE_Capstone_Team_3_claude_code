@@ -1,0 +1,83 @@
+{
+  "scenario": {
+    "id": "PUB-09",
+    "workflow": "security",
+    "prompt": "Demonstrate revoked contractor denial despite cached entitlement.",
+    "focus": [
+      "continuous authorization",
+      "deny by default",
+      "audit"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/users_entitlements.csv",
+    "data/access_cache.csv",
+    "data/access_logs.csv",
+    "knowledge/ZERO_TRUST_AI_TOOLS.md"
+  ],
+  "evidence": [
+    {
+      "source": "data/users_entitlements.csv",
+      "sha256": "cf155def1a9afc2eb71d54fbf1bf8f52740bb18d095e331aae5f6ac4ec7f0b25",
+      "records": [
+        {
+          "user": "contractor_77",
+          "role": "supplier_quality_viewer",
+          "iam_state": "revoked",
+          "ai_gateway_state": "active_cached"
+        },
+        {
+          "user": "qp_eu_1",
+          "role": "qualified_person",
+          "iam_state": "active",
+          "ai_gateway_state": "active"
+        }
+      ]
+    },
+    {
+      "source": "data/access_cache.csv",
+      "sha256": "040bc0ed990082a4f20150c124122acace92f16586cc9a90f3e944a8758c5d64",
+      "records": [
+        {
+          "user": "contractor_77",
+          "cached_until": "2026-08-03T10:00:00Z",
+          "revoked_at": "2026-08-01T05:00:00Z"
+        }
+      ]
+    },
+    {
+      "source": "data/access_logs.csv",
+      "sha256": "c2ca4effe80cc8b2e23fbda2d405b350d573c1cba5f5e0b6c24b5d9efb0062d6",
+      "records": [
+        {
+          "event_id": "AL-1",
+          "user": "lab_shared_night",
+          "system": "CDS",
+          "time": "2026-07-23T23:15:00Z",
+          "action": "approve_sequence"
+        },
+        {
+          "event_id": "AL-2",
+          "user": "site_coordinator_14",
+          "system": "EDC",
+          "time": "2026-07-20T10:00:00Z",
+          "action": "login_from_two_devices"
+        }
+      ]
+    },
+    {
+      "source": "knowledge/ZERO_TRUST_AI_TOOLS.md",
+      "sha256": "af7e0b3172483e784b57e392b1c4febc493964a7f7cbac8b1d5baec7f781478c",
+      "text": "# Zero Trust Ai Tools\n\n## Document control\n\n- Document ID: K-032\n- Status: approved\n- Effective date: 2026-06-05\n- Synthetic authority: NovaCura Global Policy\n- Training classification: scenario evidence; not a real controlled document\n\n## Purpose and scope\n\nRequires continuous authorization, scoped tools, signed manifests and transaction approval.\n\n## Mandatory controls\n\n- Authorize each user, purpose, object and tool at execution time.\n- Require approved signed manifests, least privilege and segregation of duties.\n- Use idempotency, approval and audit controls for any side-effect-capable tool.\n\n## Evidence expected\n\n- Source identity, version, effective date, responsible owner and retrieval time.\n- Input records, transformations, conflicts, gaps, reviewer actions and resulting audit events.\n- Any exception, escalation, override or residual risk with accountable approval.\n\n## Prohibited use\n\n- Do not treat this document as authority outside its status, jurisdiction, intended scope or effective period.\n- Do not infer a regulated decision, execute a side effect, or hide conflicting evidence.\n\n## Retrieval and conflict handling\n\nThe consumer must expose status, authority and effective date; detect supersession or untrusted content; cite the exact source; and abstain or escalate when applicability cannot be established.\n\nThis document is part of a fictional training scenario. Participants must determine authority, applicability, supersession and permitted use.\n"
+    }
+  ],
+  "response_contract": "advisory_nonexecuting",
+  "expected_answer_included": false
+}

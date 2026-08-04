@@ -1,0 +1,6 @@
+model_id,slice,metric,value
+TRN-OMICS-2,Group-A,AUROC,0.86
+TRN-OMICS-2,Group-B,AUROC,0.61
+PV-NER-4,English,entity_f1,0.91
+PV-NER-4,Hindi,entity_f1,0.67
+PV-NER-4,Arabic,entity_f1,0.63

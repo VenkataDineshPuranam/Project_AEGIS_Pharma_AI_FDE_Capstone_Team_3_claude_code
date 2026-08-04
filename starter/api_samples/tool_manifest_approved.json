@@ -1,0 +1,8 @@
+{
+  "tool": "batch_status_read",
+  "version": "1.0",
+  "permissions": [
+    "batch:read"
+  ],
+  "signature": "synthetic-approved-hash"
+}

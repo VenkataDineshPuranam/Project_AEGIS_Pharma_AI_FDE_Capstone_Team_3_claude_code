@@ -1,0 +1,2 @@
+event_id,specimen_id,purpose,status,consent_check
+PE-9,SP-044-A,biomarker_model,completed,cached_active

@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "id": "PUB-15",
+    "workflow": "clinical",
+    "prompt": "Determine applicable protocol context for S-301-044 without making eligibility decision.",
+    "focus": [
+      "site approval",
+      "version authority",
+      "abstention"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/subjects.csv",
+    "data/eligibility_evidence.csv",
+    "data/site_approvals.csv",
+    "data/protocol_versions.csv",
+    "source_documents/Protocol_NCB204_301_v4_1.md",
+    "source_documents/Protocol_NCB204_301_v5_0.md",
+    "knowledge/CLINICAL_PROTOCOL_AUTHORITY.md"
+  ],
+  "evidence": [
+    {
+      "source": "data/subjects.csv",
+      "sha256": "821fd2853b1a8bd0635b555717c41af5aae4d0bae2ad0e7d99c23a9abdb8d6cc",
+      "records": [
+        {
+          "subject_id": "S-301-044",
+          "trial_id": "NCB204-301",
+          "site_id": "IN-014",
+          "status": "screening"
+        },
+        {
+          "subject_id": "S-301-118",
+          "trial_id": "NCB204-301",
+          "site_id": "DE-008",
+          "status": "randomised"
+        }
+      ]
+    },
+    {
+      "source": "data/eligibility_evidence.csv",
+      "sha256": "12db6b98ff9fbc870b943e35193de27c75005fd236032bbc467245f4b7d4a751",
+      "records": [
+        {
+          "subject_id": "S-301-044",
+          "test": "ALT",
+          "value": "58",
+          "unit": "U/L",
+          "central_uln": "40",
+          "local_uln": "60",
+          "edc_rule_uln": "40"
+        }
+      ]
+    },
+    {
+      "source": "data/site_approvals.csv",
+      "sha256": "dc46884effe22b1b1e03b5b74c383aeadeb5bfbe0f4b70e2cdcc6eaadf9a443e",
+      "records": [
+        {
+          "site_id": "IN-014",
+          "trial_id": "NCB204-301",
+          "approved_protocol": "4.1",
+          "ec_status": "active"
+        },
+        {
+          "site_id": "DE-008",
+          "trial_id": "NCB204-301",
+          "approved_protocol": "5.0",
+          "ec_status": "active"
+        }
+      ]
+    },
+    {
+      "source": "data/protocol_versions.csv",
+      "sha256": "7bb80babcd46e01c430134da5b6c28cb53cfbd9dd3fc8c186e1e261aec71398b",
+      "records": [
+        {
+          "trial_id": "NCB204-301",
+          "version": "5.0",
+          "effective_date": "2026-06-01",
+          "status": "global_current"
+        },
+        {
+          "trial_id": "NCB204-301",
+          "version": "4.1",
+          "effective_date": "2026-02-01",
+          "status": "current_IN_pending_amendment"
+        },
+        {
+          "trial_id": "NCB204-301",
+          "version": "3.2",
+          "effective_date": "2025-10-01",
+          "status": "obsolete_but_site_cached"
+        }
+      ]
+    },
+    {
+      "source": "source_documents/Protocol_NCB204_301_v4_1.md",
+      "sha256": "a3b1364999321b228090988c0a861b6f56a12cc95811a76fddc89ed92f2678ec",
+      "text": "# Synthetic Protocol Context Extract — NCB204-301 v4.1\n\n- Status: approved at site IN-014\n- Effective at site: 2026-02-01\n- Supersession state: remains locally applicable until amendment approval\n\nEligibility evidence must be reviewed against the protocol version approved for the site. This extract does not determine participant eligibility.\n"
+    },
+    {
+      "source": "source_documents/Protocol_NCB204_301_v5_0.md",
+      "sha256": "28449b57b27e175604a7350fdb5f1f857574a7fdbb320ee4a2adc6cff3115946",
+      "text": "# Synthetic Protocol Context Extract — NCB204-301 v5.0\n\n- Status: global current\n- Global effective date: 2026-06-01\n- Site IN-014 approval: pending in supplied evidence\n\nGlobal currency alone does not prove local applicability. This extract does not determine participant eligibility.\n"
+    },
+    {
+      "source": "knowledge/CLINICAL_PROTOCOL_AUTHORITY.md",
+      "sha256": "d57f0f13c154c6ce6f30e93bc114b288507c987e6ca4750b8283e3c66cf61190",
+      "text": "# Clinical Protocol Authority\n\n## Document control\n\n- Document ID: K-008\n- Status: approved\n- Effective date: 2026-04-15\n- Synthetic authority: NovaCura Global Policy\n- Training classification: scenario evidence; not a real controlled document\n\n## Purpose and scope\n\nDefines protocol effective version by site and approval state.\n\n## Mandatory controls\n\n- Determine applicability by trial, country, site, approval state and effective time.\n- Preserve global and local versions without overwriting.\n- Do not make eligibility decisions.\n\n## Evidence expected\n\n- Source identity, version, effective date, responsible owner and retrieval time.\n- Input records, transformations, conflicts, gaps, reviewer actions and resulting audit events.\n- Any exception, escalation, override or residual risk with accountable approval.\n\n## Prohibited use\n\n- Do not treat this document as authority outside its status, jurisdiction, intended scope or effective period.\n- Do not infer a regulated decision, execute a side effect, or hide conflicting evidence.\n\n## Retrieval and conflict handling\n\nThe consumer must expose status, authority and effective date; detect supersession or untrusted content; cite the exact source; and abstain or escalate when applicability cannot be established.\n\nThis document is part of a fictional training scenario. Participants must determine authority, applicability, supersession and permitted use.\n"
+    }
+  ],
+  "response_contract": "advisory_nonexecuting",
+  "expected_answer_included": false
+}

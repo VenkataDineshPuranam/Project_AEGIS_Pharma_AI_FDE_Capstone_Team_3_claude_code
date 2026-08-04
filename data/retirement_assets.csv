@@ -1,0 +1,5 @@
+asset,retention
+model cards,required
+prompt versions,required
+decision evidence,risk_based_GxP
+raw sensitive prompts,minimise/controlled

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "files": 311,
+    "injects": 84,
+    "csv": 143,
+    "knowledge": 32,
+    "templates": 30,
+    "public_scenarios": 15
+  }
+}

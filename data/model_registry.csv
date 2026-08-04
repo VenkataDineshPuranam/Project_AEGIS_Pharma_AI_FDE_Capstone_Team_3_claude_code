@@ -1,0 +1,4 @@
+model_id,intended_use,status,hash
+TRN-OMICS-2,portfolio ranking,research_unqualified,sha256:111aaa
+GXP-SUM-1,batch evidence summarisation,pilot,sha256:222bbb
+PV-NER-4,case entity extraction,validated_scope_en_de,sha256:333ccc

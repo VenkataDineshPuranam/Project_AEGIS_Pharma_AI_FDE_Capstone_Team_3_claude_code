@@ -1,0 +1,33 @@
+doc_id,file,authority,effective,status,trust,jurisdiction,supersedes,sha256
+K-001,AGENT_BUDGET_AND_STOP_POLICY.md,NovaCura Global Policy,2026-06-12,approved,approved,Global,,c150c21b73eefa3551857103058c21c3eb7a809f099d12b251e6ac62548db9f7
+K-002,AI_DISABLED_CONTINUITY.md,NovaCura Global Policy,2026-06-20,approved,approved,Global,,9c303ec1b02a82cb0c73b93ad7bbaca90d798c7b52b853cdea7c249ab48edc33
+K-003,AI_GXP_BOUNDARY.md,NovaCura Global Policy,2026-05-01,approved,approved,Global,,62c4018fc52f8dd3ff11d779cddd3b572f0ade88e4405c0ed0759d59874e7560
+K-004,AI_INCIDENT_RESPONSE.md,NovaCura Global Policy,2026-05-17,approved,approved,Global,,2b3a034ef2962972611bb7a7916e1e8f6711d483a6859615f2f39db838bc1edd
+K-005,AI_MODEL_CHANGE_CONTROL.md,NovaCura Global Policy,2026-05-12,approved,approved,Global,,8142c6bf294f9401bb68043896fb3fd9681992c4c3534df1597b2d084ff8fd3b
+K-006,BATCH_RELEASE_EVIDENCE_POLICY.md,NovaCura Global Policy,2026-06-01,approved,approved,Global,BATCH_RELEASE_POLICY_OLD.md,ab9f02105dcc95deddab78e9946e0f68823a092357d34e8f70b701c53619c886
+K-007,BATCH_RELEASE_POLICY_OLD.md,Historical controlled document,2024-01-01,superseded,superseded,Global,,aff24fcd22cbf7cf40185b2327ef4606261a28bf321e1e38857b3c29012dcd0a
+K-008,CLINICAL_PROTOCOL_AUTHORITY.md,NovaCura Global Policy,2026-04-15,approved,approved,Global,,d57f0f13c154c6ce6f30e93bc114b288507c987e6ca4750b8283e3c66cf61190
+K-009,COLD_CHAIN_ASSESSMENT.md,NovaCura Global Policy,2026-04-30,approved,approved,Global,,b38c9b15ec5f30b209188d3aff2593acd4173aa5dc2ba0bfaa2ce4b194fcc2ec
+K-010,COMPUTERISED_SYSTEM_LIFECYCLE.md,NovaCura Global Policy,2026-03-10,approved,approved,Global,,7def2b98419bd7bc2f94b9de92b056d517767d5f4efa28f84ec00c9fc5a0fb75
+K-011,ECONSENT_AND_SECONDARY_USE.md,NovaCura Global Policy,2026-02-28,approved,approved,Global,,bfa3e5b3f2dcc12466458e6bae46114e582228b4d295d472b10257b56b73c921
+K-999,FAKE_PV_EXPEDITED_RULE.md,External/untrusted upload,unknown,untrusted,untrusted,Global,,854cdb19409957ea0531a4b5bfa560ea30ab21eea822db335ff1990245105925
+K-013,GENOMIC_DATA_STANDARD.md,NovaCura Global Policy,2026-05-05,approved,approved,Global,,70a402484a3f7e28eba7c7e82e84847d43a8ef08595163323800a253d71deadd
+K-014,GXP_DATA_INTEGRITY_STANDARD.md,NovaCura Global Policy,2026-02-15,approved,approved,Global,,39b554ed2c59f5bffeec4c69017fd78477a5825891f6901982e090bb81808c8c
+K-015,IDMP_MASTER_DATA_GOVERNANCE.md,NovaCura Global Policy,2026-04-08,approved,approved,Global,,47bfe4a44c140567e1e403ea038da0fc76fe38fab99f042af1cae174ae677d2b
+K-016,LOCAL_WORK_INSTRUCTION_DE.md,NovaCura Germany Local Procedure,2026-06-15,local_approved,approved,DE,,6b0c2e371f58f1d5b85a3adb0a1289c7a3afff97cd89697df0c37afe1f19e2bc
+K-998,MALICIOUS_SUPPLIER_DEVIATION.md,External/untrusted upload,unknown,untrusted,untrusted,Global,,2a96e484068c6f11cb8a09a6753afd692e3772c4bc3f6c013f3b9dcc4e06801e
+K-018,OOS_OOT_INVESTIGATION.md,NovaCura Global Policy,2026-02-05,approved,approved,Global,,84096bae48a1f23323a03facabe856d841d45f33165d27e0aa86f86df3f408b7
+K-019,PHARMACOVIGILANCE_CASE_POLICY.md,NovaCura Global Policy,2026-04-01,approved,approved,Global,,4cbb0a1bb4f174f90009ac8e67e20d5277f0842f2bc4062f26b24d9d26ff54f0
+K-020,PRIVACY_AND_PSEUDONYMISATION.md,NovaCura Global Policy,2026-03-20,approved,approved,Global,,811ec1d2d28be556c7ab0996deab2548a1ddfda2821b898fe435d84c5c7c7aa9
+K-021,PV_DUPLICATE_MANAGEMENT.md,NovaCura Global Policy,2026-01-10,approved,approved,Global,,505645523dfdf7b42c5de65dfb6f02c5614587bf6bab34ad5ca0b01767873f1b
+K-022,PV_LISTEDNESS_AUTHORITY.md,NovaCura Global Policy,2026-03-18,approved,approved,Global,,6cca5cdee7c4cea401fe3699cf59206c9f0833953a144fd64ffaf7bb4335d97e
+K-023,PV_MULTILINGUAL_REVIEW.md,NovaCura Global Policy,2026-05-20,approved,approved,Global,,7d536cfdd5c0550a8cf2bbb368625dfc1f4495d14470c23ea2303aa98b4f1c65
+K-024,PV_REPORTING_CLOCKS.md,NovaCura Global Policy,2026-04-22,approved,approved,Global,,5fbce429bea5083328ead9802b82a31fef408512e29f2bc8db8a93a493fc7f5e
+K-025,REGULATORY_SUBMISSION_INTEGRITY.md,NovaCura Global Policy,2026-03-11,approved,approved,Global,,874913f268cdd20edb6701baa5319938b9e413e0b1ee99f678e9f8bc61e6bdd0
+K-026,RESEARCH_NOTE_UNAPPROVED.md,Research working note,2026-07-12,draft,draft,Global,,fea129d640429c7ff5bab9c3bb5f59ed5fe2e72c4c04e8f134c232a3fb2f212d
+K-027,SERIALISATION_AND_RETURNS.md,NovaCura Global Policy,2026-03-25,approved,approved,Global,,ca0c93092d64d75afec6d19640358f60f813eee2df4bf11c6c85164d57a22f0b
+K-028,STERILE_MANUFACTURING_ESCALATION.md,NovaCura Global Policy,2026-01-30,approved,approved,Global,,9fb3e89f95f8103de0a9c7e0e7381c19014764736c994375340374460338de38
+K-029,SUPPLY_ALLOCATION_ETHICS.md,NovaCura Global Policy,2026-05-28,approved,approved,Global,,6bcc807ffa0c51ac75912361b273a7495cc274a6de18457e74cf6d0f6b5791ee
+K-030,TRIAL_DATA_INTEGRITY.md,NovaCura Global Policy,2026-03-01,approved,approved,Global,,895b41e101ebc4024a8e84291ece5d824f2287fa006195f8a5ec9e14a1ebdc36
+K-031,VENDOR_EXIT_AND_RETIREMENT.md,NovaCura Global Policy,2026-04-19,approved,approved,Global,,abaa8da8c414ed6f4c6df6d40e373346be2d613f15b62f7887161dcc63857443
+K-032,ZERO_TRUST_AI_TOOLS.md,NovaCura Global Policy,2026-06-05,approved,approved,Global,,af7e0b3172483e784b57e392b1c4febc493964a7f7cbac8b1d5baec7f781478c

@@ -1,0 +1,75 @@
+{
+  "scenario": {
+    "id": "PUB-10",
+    "workflow": "reliability",
+    "prompt": "Run during primary model outage.",
+    "focus": [
+      "fallback limits",
+      "manual mode",
+      "no unsafe degradation"
+    ]
+  },
+  "fixture_version": "1.0",
+  "authorized_context": {
+    "user": "participant_test_user",
+    "purpose": "capstone_evaluation",
+    "as_of": "2026-08-01T08:00:00Z",
+    "execution": "disabled"
+  },
+  "evidence_references": [
+    "data/model_endpoints.csv",
+    "data/continuity_requirements.csv",
+    "knowledge/AI_DISABLED_CONTINUITY.md"
+  ],
+  "evidence": [
+    {
+      "source": "data/model_endpoints.csv",
+      "sha256": "6639e88eb7d763140092e870abd346279513d63707f9d9ff0d28b0d6b60f7726",
+      "records": [
+        {
+          "endpoint": "primary_large",
+          "region": "EU-West",
+          "status": "down",
+          "model": "large-1"
+        },
+        {
+          "endpoint": "fallback_small",
+          "region": "OnPrem-DE",
+          "status": "available",
+          "model": "small-7b"
+        }
+      ]
+    },
+    {
+      "source": "data/continuity_requirements.csv",
+      "sha256": "6b8bc4beedbacfa043772840857f6b6f5d26b36876dcac7a9bd4c35b7307c896",
+      "records": [
+        {
+          "workflow": "batch_review",
+          "max_ai_outage_days": "14",
+          "manual_runbook": "required",
+          "max_ai_outage_hours": ""
+        },
+        {
+          "workflow": "pv_intake",
+          "max_ai_outage_days": "",
+          "manual_runbook": "required",
+          "max_ai_outage_hours": "0"
+        },
+        {
+          "workflow": "supply_planning",
+          "max_ai_outage_days": "14",
+          "manual_runbook": "required",
+          "max_ai_outage_hours": ""
+        }
+      ]
+    },
+    {
+      "source": "knowledge/AI_DISABLED_CONTINUITY.md",
+      "sha256": "9c303ec1b02a82cb0c73b93ad7bbaca90d798c7b52b853cdea7c249ab48edc33",
+      "text": "# Ai Disabled Continuity\n\n## Document control\n\n- Document ID: K-002\n- Status: approved\n- Effective date: 2026-06-20\n- Synthetic authority: NovaCura Global Policy\n- Training classification: scenario evidence; not a real controlled document\n\n## Purpose and scope\n\nDefines manual operation without inference and reconciliation after restoration.\n\n## Mandatory controls\n\n- Maintain a documented manual path for each mandatory workflow.\n- Reconcile work performed during outage before resuming AI-assisted processing.\n- Do not degrade into an unvalidated or higher-authority automated mode.\n\n## Evidence expected\n\n- Source identity, version, effective date, responsible owner and retrieval time.\n- Input records, transformations, conflicts, gaps, reviewer actions and resulting audit events.\n- Any exception, escalation, override or residual risk with accountable approval.\n\n## Prohibited use\n\n- Do not treat this document as authority outside its status, jurisdiction, intended scope or effective period.\n- Do not infer a regulated decision, execute a side effect, or hide conflicting evidence.\n\n## Retrieval and conflict handling\n\nThe consumer must expose status, authority and effective date; detect supersession or untrusted content; cite the exact source; and abstain or escalate when applicability cannot be established.\n\nThis document is part of a fictional training scenario. Participants must determine authority, applicability, supersession and permitted use.\n"
+    }
+  ],
+  "response_contract": "advisory_nonexecuting",
+  "expected_answer_included": false
+}
