@@ -16,7 +16,7 @@
 | Owner | 5-person delivery team (seats P1–P5; fill names at kickoff) |
 | Version / date | **FINAL v1.1** — 2026-08-04 |
 | Status | Draft pending Stage 0 / G1 ratification |
-| Principles addendum | Cursor eval architecture + 6-step eval workflow + engineering FinOps metrics (§11.8–§11.9) |
+| Principles addendum | Claude Code eval architecture + 6-step eval workflow + engineering FinOps metrics (§11.8–§11.9) |
 | Dual outcome | **(A)** Capstone defence-ready (G1–G8) · **(B)** Production-ready release candidate (requires G9) |
 | Related | `MERGE_AUDIT.md`; `PROMPT_FINALIZE_PROJECT_PLAN.md`; package `WORKSHOP_DEPLOYMENT_PLAN.md`, `DEFINITION_OF_DONE.md` |
 | Living location | `submission/artefacts/ProjectPlan/AEGIS_PROJECT_PLAN_FINAL.md` |
@@ -72,7 +72,7 @@ All three require `execution_status: "not_executed"`, authorization checked at i
 | V1.md (body “PMP V2”) | Validator policy, freeze/binary/bytecode, G-01…G-20, RAID/MoSCoW, clean-room 6 steps, 84/12/10/13 coverage, Mermaid, 200 ph model, entry criteria |
 | V2.pdf (Timeline & Work Division) | Dual-track A/B, G1–G9, P9 hardening, Option B+ D1–D14, seats/streams, NFRs@G1, agent freeze, review pairs, owes G8/G9, kickoff, Readiness Board |
 | V3.md (body v0.1) | FACT labels, problem/−14%/no-AI, stop triggers, evidence inventory, inject→contract maps, M0–M9, DoD checklist, next actions |
-| V4.md (Combined Exec V2) | Realistic ~61h buffer, stakeholder pack RACI, hard-gate matrix, schema-exact build A→C→B, evidence-resolver, RELATIONSHIP_MODEL + knowledge_catalog gates, Cursor evidence, XSS note, innovation slot |
+| V4.md (Combined Exec V2) | Realistic ~61h buffer, stakeholder pack RACI, hard-gate matrix, schema-exact build A→C→B, evidence-resolver, RELATIONSHIP_MODEL + knowledge_catalog gates, Claude Code evidence, XSS note, innovation slot |
 
 Prior gaps G-01…G-20 remain closed as in V1. New merge decisions: **G-21** role model = V2 seats (P4=GxP/ISO, P5=Sec/Eval); **G-22** gate SoT = G1–G9 with CP* mapping; **G-23** three budget labels (40h / realistic buffer / +P9). See `MERGE_AUDIT.md`.
 
@@ -315,7 +315,7 @@ Hours = official Track A unless noted. Entry criteria must hold before start.
 | P1 Discovery | 5 | 7 | 25 | P0 done | P1: 01–04 + NFRs; P2 inject skim; P3 script skeleton; P4/P5 constraints catalogue | 01–04; G1 |
 | P2 Domain | 5 | 9 | 25 | G1 | P2: 05–08 + 84-inject register; P3 RTM/language; P4 authority; RELATIONSHIP_MODEL checker + knowledge_catalog gate started | 05–09; evidence map; G2 |
 | P3 Architecture | 6 | 8 | 30 | G2 | P3: 10–12 + shared evidence-resolver; P4: 13–15; P5 threat skeleton; contract tests green | 10–15; G3 |
-| P4 Secure design | 5 | 6 | 25 | G3 | P5: 16–17 + failing prohibited tests; P4: 19–21; P1: 18; Cursor evidence | 16–21; **G4** (agents may unlock) |
+| P4 Secure design | 5 | 6 | 25 | G3 | P5: 16–17 + failing prohibited tests; P4: 19–21; P1: 18; Claude Code evidence | 16–21; **G4** (agents may unlock) |
 | P5 POC build | 8 | 14 | 40 | G4; failing tests exist | P3 build A→C→B + app; domain rules; P5 tests; AI-disabled scripts | 3 workflows offline; G5 |
 | P6 TEVV | 4 | 6 | 20 | G5 | P5: runner+graders+policies+reports (§11.8); 12 suites + 22–25; P1 FinOps 23 + delivery FinOps §11.9; red-team/outage | Report set + machine-readable results; G6 |
 | P7 Ops + clean-room | 3 | 4 | 15 | G6 | P1: 26,29; P4: 27+28 draft; runbooks; evidence files; clean-room | G7 |
@@ -500,7 +500,7 @@ Schema failure; fabricated/uncited fact; unresolved ID/unit/time/authority prese
 
 PUB-01…03 batch · 04…06 pv · 07…08 supply · 09 security · 10 reliability · 11 privacy · 12 integration · 13 agent · 14 finops · 15 clinical — all `expected_answer_included=no`.
 
-### 11.8 Cursor evaluation architecture (mandatory shape)
+### 11.8 Claude Code evaluation architecture (mandatory shape)
 
 Reusable offline-first eval framework under **`submission/evaluation/`** (package path; do not put solution evals in immutable `evaluation/` challenge tree).
 
@@ -514,7 +514,7 @@ Reusable offline-first eval framework under **`submission/evaluation/`** (packag
 | **Policies** | `submission/evaluation/policies/` — automatic failure / release-gate rules (FINAL §11.5 ten gates + hard gates) | FDE-4 + FDE-5 | D5–D7 design; D10 enforce |
 | **Reports** | `submission/evaluation/reports/` — `summary.json`, `detailed_results.jsonl`, `scorecard.csv`, `failed_cases.json`, `final_evaluation_report.md` plus package `test_results.json` / `evaluation_results.json` | FDE-5 | D10 (+ brownfield baseline report earlier) |
 
-**Six-step Cursor eval workflow → plan mapping**
+**Six-step Claude Code eval workflow → plan mapping**
 
 | Step | Goal | Plan home |
 |---|---|---|
@@ -529,7 +529,7 @@ Goal of the framework: **measure current state, identify gaps, create a foundati
 
 ### 11.9 Engineering FinOps metrics (delivery efficiency)
 
-Artefact **23** covers product token/TCO. Separately, the team logs **Cursor delivery FinOps** in `submission/evidence/finops_delivery_log.csv` (or equivalent) per working day / major task:
+Artefact **23** covers product token/TCO. Separately, the team logs **Claude Code delivery FinOps** in `submission/evidence/finops_delivery_log.csv` (or equivalent) per working day / major task:
 
 | # | Metric | Why track | Owner |
 |---|---|---|---|
@@ -607,14 +607,14 @@ Hard-gate column verified against `requirements/ASSESSMENT_RUBRIC.csv` (`hard_ga
 
 | Asset | Use at |
 |---|---|
-| `.cursor/rules/pharma-fde.mdc` | Always-on guardrails |
+| `CLAUDE.md` | Always-on guardrails |
 | Commands 00 qualify / 01 map evidence / 02 tests-first | P1 / P2 / P3–P4 |
 | Skills gxp / pv / supply | Workflows A/B/C |
 | Agents security / test / evidence reviewers | Cross-checks; save outputs under `submission/evidence/` |
 | `prompts/PROMPT_LIBRARY.md` (6 prompts) | Stages as mapped in V4 |
-| Cursor 6-step eval workflow (§11.8) | Understand → design set → structure → adapter → graders → baseline/regression reports |
+| Claude Code 6-step eval workflow (§11.8) | Understand → design set → structure → adapter → graders → baseline/regression reports |
 
-Cite skill/command used in ADRs (11). If not using Cursor, load equivalent guardrail text and record the tool.
+Cite skill/command used in ADRs (11). If not using Claude Code, load equivalent guardrail text and record the tool.
 
 ---
 
@@ -641,7 +641,7 @@ Cite skill/command used in ADRs (11). If not using Cursor, load equivalent guard
 
 - **Must (never cut):** 3 offline workflows; prohibited-action fail-closed tests; 4 evidence files; 4 runbooks; 5 scripts; `--final`; defence elements 3,4,5,7,13; agent freeze until G4; dual-track honesty.
 - **Should:** full 12-suite depth (never drop suites 3,4,5,9,12); ≥10 ADRs; subgroup breadth; Track B if claim needed.
-- **Could:** PDF exports; UI polish; Cursor evidence beyond rules; deep 19/20 where applicability argued.
+- **Could:** PDF exports; UI polish; Claude Code evidence beyond guardrails; deep 19/20 where applicability argued.
 - **Won’t:** real regulated use; editing challenge evidence; editing MANIFEST/FILE_HASHES to force green; claiming ISO/GxP certification.
 
 ---
@@ -762,7 +762,7 @@ Pick after G2: (a) cross-workflow signal correlation, or (b) frame RELATIONSHIP_
 |---|---|---|---|
 | Finalize prompt execution | Four drafts merged per PROMPT_FINALIZE | FINAL v1.0 + MERGE_AUDIT | 2026-08-03 |
 | Package re-verify | Rubric hard gates; evidence_item schema; stakeholder conflicts | Embedded in §§11–12 | 2026-08-03 |
-| Cursor eval + FinOps principles | Images: eval architecture, 6-step workflow, 8 delivery FinOps metrics | Added §§11.8–11.9; day-wise v1.2 alignment | 2026-08-04 |
+| Claude Code eval + FinOps principles | Images: eval architecture, 6-step workflow, 8 delivery FinOps metrics | Added §§11.8–11.9; day-wise v1.2 alignment | 2026-08-04 |
 
 ---
 

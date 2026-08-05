@@ -29,7 +29,7 @@ All artefacts must be completed by participants and stored under `submission/`. 
 - C4 architecture, integration contracts, event semantics and at least ten meaningful ADRs.
 - Brownfield modernization, migration, coexistence, cutover, rollback and decommissioning plan.
 - Reproducible offline execution, locked dependencies, reset, seeded data and evidence export.
-- Cursor-oriented engineering evidence: rules, skills, agents, commands, prompts and review controls.
+- Claude Code-oriented engineering evidence: CLAUDE.md guardrails, skills, agents, commands, prompts and review controls.
 
 ## AI and agentic design
 

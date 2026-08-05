@@ -1,7 +1,4 @@
----
-description: Project AEGIS-PHARMA engineering guardrails
-alwaysApply: true
----
+# Project AEGIS-PHARMA engineering guardrails
 
 - Work only under `submission/`; challenge evidence is immutable.
 - Never fabricate, overwrite or silently normalize regulated evidence. Preserve source, authority, effective date, version, time precision, unit, verbatim value and uncertainty.

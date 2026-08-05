@@ -17,16 +17,16 @@ Challenge-only; no solution or answer key.
 
 ## Files
 
-- `.cursor/agents/evidence-reviewer.md`
-- `.cursor/agents/security-reviewer.md`
-- `.cursor/agents/test-engineer.md`
-- `.cursor/commands/00_qualify_problem.md`
-- `.cursor/commands/01_map_evidence.md`
-- `.cursor/commands/02_build_tests_first.md`
-- `.cursor/rules/pharma-fde.mdc`
-- `.cursor/skills/bounded-supply-planning.md`
-- `.cursor/skills/gxp-evidence-reconciliation.md`
-- `.cursor/skills/pv-case-intake.md`
+- `CLAUDE.md`
+- `.claude/agents/evidence-reviewer.md`
+- `.claude/agents/security-reviewer.md`
+- `.claude/agents/test-engineer.md`
+- `.claude/commands/00_qualify_problem.md`
+- `.claude/commands/01_map_evidence.md`
+- `.claude/commands/02_build_tests_first.md`
+- `.claude/skills/bounded-supply-planning/SKILL.md`
+- `.claude/skills/gxp-evidence-reconciliation/SKILL.md`
+- `.claude/skills/pv-case-intake/SKILL.md`
 - `AUDIT_AND_SANITY_CHECK.md`
 - `CHANGELOG.md`
 - `DEFINITION_OF_DONE.md`

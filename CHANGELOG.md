@@ -19,7 +19,7 @@
 - Fifteen reproducible public evidence fixtures.
 - Three executable fail-closed workflow schemas, a shared evidence schema and positive/negative tests.
 - Cross-platform Python, PowerShell and shell launchers.
-- Expanded Cursor rules, reviewers and participant prompt library.
+- Expanded Claude Code guardrails, reviewers and participant prompt library.
 - Structured versions of all 30 participant artefact templates.
 - Machine-readable validation report and strict clean-room workflow.
 
