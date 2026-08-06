@@ -55,12 +55,12 @@
       "tags": ["delivery"]
     },
     {
-      "id": "claude_guardrails",
-      "label": "CLAUDE.md / Agents / Skills",
+      "id": "cursor_guardrails",
+      "label": "Cursor Rules / Agents / Skills",
       "layer": "actors",
       "type": "tool",
-      "path": ".claude/",
-      "tooltip": "Always-on pharma-fde guardrails (CLAUDE.md); security/test/evidence reviewer subagents; GxP/PV/supply skills. Agents OFF until G4 PASS in the project plan.",
+      "path": ".cursor/",
+      "tooltip": "Always-on pharma-fde rules; security/test/evidence reviewer agents; GxP/PV/supply skills. Agents OFF until G4 PASS in the project plan.",
       "tags": ["ai-tooling"]
     },
     {
@@ -444,7 +444,7 @@
   ],
   "edges": [
     {"id": "e1", "from": "fde_team", "to": "submission_root", "label": "writes only", "kind": "control"},
-    {"id": "e2", "from": "claude_guardrails", "to": "fde_team", "label": "guides", "kind": "control"},
+    {"id": "e2", "from": "cursor_guardrails", "to": "fde_team", "label": "guides", "kind": "control"},
     {"id": "e3", "from": "human_reviewers", "to": "wf_a_batch", "label": "accountable decisions", "kind": "control"},
     {"id": "e4", "from": "human_reviewers", "to": "wf_b_pv", "label": "accountable decisions", "kind": "control"},
     {"id": "e5", "from": "human_reviewers", "to": "wf_c_supply", "label": "approvals", "kind": "control"},
@@ -601,7 +601,7 @@
     },
     {
       "id": "flow_eval_stack",
-      "name": "Evaluation Stack (Claude Code Eval Architecture)",
+      "name": "Evaluation Stack (Cursor Eval Architecture)",
       "description": "Datasets → adapter → runner → graders → policies → reports against SUT.",
       "audience": ["fde", "agent", "eval"],
       "steps": [
